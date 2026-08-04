@@ -9,13 +9,17 @@
   <meta name="keywords" content="láser estético CDMX, depilación láser CDMX, eliminar tatuaje CDMX, manchas melasma, rejuvenecimiento facial láser, picosegundo, láser diodo 808" />
   <meta name="author" content="LaserMed" />
   <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#f5f1ea" media="(prefers-color-scheme: light)" />
+  <link rel="canonical" href="https://lasermed.abdev.click/" />
 
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://lasermed.mx/" />
+  <meta property="og:url" content="https://lasermed.abdev.click/" />
   <meta property="og:title" content="LaserMed · Piel cuidada con luz de verdad" />
   <meta property="og:description" content="Boutique de láser estético en CDMX. Depilación definitiva, eliminación de tatuajes, manchas, rejuvenecimiento. Con valoración médica y manos certificadas." />
-  <meta property="og:image" content="https://lasermed.mx/assets/img/hero-1.webp" />
+  <meta property="og:image" content="https://lasermed.abdev.click/assets/img/og-image.webp" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
   <meta property="og:locale" content="es_MX" />
   <meta property="og:site_name" content="LaserMed" />
 
@@ -23,16 +27,18 @@
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="LaserMed · Piel cuidada con luz de verdad" />
   <meta name="twitter:description" content="Boutique de láser estético en CDMX. Depilación definitiva, eliminación de tatuajes, manchas y rejuvenecimiento." />
-  <meta name="twitter:image" content="https://lasermed.mx/assets/img/hero-1.webp" />
+  <meta name="twitter:image" content="https://lasermed.abdev.click/assets/img/og-image.webp" />
 
-  <!-- Schema.org MedicalClinic -->
+  <!-- Schema.org MedicalClinic + LocalBusiness + FAQPage -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "MedicalClinic",
     "name": "LaserMed",
     "description": "Boutique de láser estético en CDMX. Depilación definitiva, eliminación de tatuajes, manchas y rejuvenecimiento facial.",
-    "url": "https://lasermed.mx",
+    "url": "https://lasermed.abdev.click",
+    "image": "https://lasermed.abdev.click/assets/img/og-image.webp",
+    "logo": "https://lasermed.abdev.click/favicon.svg",
     "telephone": "+52-55-XXXX-XXXX",
     "priceRange": "$$$",
     "address": {
@@ -52,13 +58,28 @@
     ]
   }
   </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "¿Duele el láser?", "acceptedAnswer": { "@type": "Answer", "text": "El diodo 808 nm se siente como un golpe de calor tolerable gracias al cabezal refrigerado. El picosegundo se siente como un chasquido de liga elástica. Si lo necesitas, aplicamos crema anestésica 20 minutos antes." }},
+      { "@type": "Question", "name": "¿Cuántas sesiones necesito?", "acceptedAnswer": { "@type": "Answer", "text": "Depilación: 6 a 8. Tatuajes: 4 a 8. Manchas: 2 a 4. Rejuvenecimiento: 3 a 4. Te lo decimos exacto en la valoración gratuita." }},
+      { "@type": "Question", "name": "¿Cuánto cuesta el tratamiento completo?", "acceptedAnswer": { "@type": "Answer", "text": "Depende de la zona y del plan. La valoración es gratuita y al salir te llevas un estimado por escrito." }},
+      { "@type": "Question", "name": "¿Funciona para piel morena?", "acceptedAnswer": { "@type": "Answer", "text": "Sí. El diodo 808 nm es seguro en Fitzpatrick I a VI con ajuste de parámetros. El picosegundo requiere más cuidado en tonos V+." }}
+    ]
+  }
+  </script>
 
-  <!-- Favicon (inline SVG, copper dot) -->
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23c9603d'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-family='serif' font-size='18' fill='%23f8f5ef' font-weight='500'%3EL%3C/text%3E%3C/svg%3E" />
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 
-  <!-- Preconnect fonts -->
+  <!-- Preconnect + Preload crítico -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..500;1,9..144,400&family=Inter:wght@400;500;600&display=swap" />
+  <link rel="preload" as="image" href="/assets/img/hero-1.webp" fetchpriority="high" />
+  <link rel="preload" as="font" type="font/woff2" href="https://fonts.gstatic.com/s/fraunces/v32/6NUu8FMOLAr3K7fCJ6Hbsw.woff2" crossorigin />
 
   <!-- Styles -->
   <link rel="stylesheet" href="css/reset.css" />
@@ -68,13 +89,19 @@
   <link rel="stylesheet" href="css/sections.css" />
   <link rel="stylesheet" href="css/motion.css" />
 
-  <!-- Lenis (smooth scroll, opcional) -->
-  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js" defer></script>
-  <!-- GSAP + ScrollTrigger -->
+  <!-- Fonts no bloqueantes -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" media="print" onload="this.media='all'" />
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" /></noscript>
+
+  <!-- JS: GSAP, ScrollTrigger, Lenis (defer + módulo) -->
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js" defer></script>
 </head>
 <body>
+
+<!-- Skip link accesibilidad -->
+<a href="#hero" class="skip-link">Saltar al contenido</a>
 
 <!-- ============================================
      NAV
@@ -126,7 +153,7 @@
      ============================================ -->
 <section class="hero" id="hero">
   <div class="hero__media" aria-hidden="true">
-    <video autoplay muted loop playsinline poster="assets/img/hero-1.webp">
+    <video autoplay muted loop playsinline preload="metadata" poster="assets/img/hero-1.webp" width="1920" height="1080">
       <source src="assets/video/hero-loop.mp4" type="video/mp4" />
     </video>
   </div>
@@ -175,16 +202,21 @@
      2 · PREGUNTA
      ============================================ -->
 <section class="pregunta" id="pregunta">
-  <div class="container">
-    <h2 class="pregunta__h2 reveal-fade">
-      ¿Ya te la hiciste<br />
-      y no te <span class="h-italic">sirvió</span>?
-    </h2>
-    <p class="pregunta__body reveal-fade" data-delay="1">
-      Vuelves cada 3 semanas. Te aplicaron, te cobraron, saliste en 8 minutos.
-      Nadie te dijo qué máquina usaron ni por qué tantas sesiones.
-      Y ahora no sabes si el láser no funciona o si simplemente te tocó un mal lugar.
-    </p>
+  <div class="container pregunta__container">
+    <div class="pregunta__media reveal-fade">
+      <img src="assets/img/pregunta.webp" alt="Hombro y cuello de mujer con luz cálida" loading="lazy" width="900" height="600" />
+    </div>
+    <div class="pregunta__text">
+      <h2 class="pregunta__h2 reveal-fade">
+        ¿Ya te la hiciste<br />
+        y no te <span class="h-italic">sirvió</span>?
+      </h2>
+      <p class="pregunta__body reveal-fade" data-delay="1">
+        Vuelves cada 3 semanas. Te aplicaron, te cobraron, saliste en 8 minutos.
+        Nadie te dijo qué máquina usaron ni por qué tantas sesiones.
+        Y ahora no sabes si el láser no funciona o si simplemente te tocó un mal lugar.
+      </p>
+    </div>
   </div>
 </section>
 
@@ -207,103 +239,96 @@
     <div class="servicios__grid">
 
       <article class="card reveal" data-delay="1">
-        <div class="card__icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-            <circle cx="12" cy="12" r="3" />
-            <path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M5 19l2-2M17 7l2-2" />
-          </svg>
+        <div class="card__media">
+          <img src="assets/img/servicio-card-depilacion.webp" alt="Piel suave después de depilación láser" loading="lazy" width="800" height="600" />
         </div>
-        <span class="card__eyebrow">808 nm · 6–8 sesiones</span>
-        <h3 class="card__title">Depilación láser definitiva</h3>
-        <span class="card__meta">Hombres y mujeres</span>
-        <p class="card__body">
-          La longitud de onda que el folículo piloso absorbe como un imán.
-          Piel suave de verdad, sin retoques cada 3 semanas.
-        </p>
-        <span class="card__cta">Saber más</span>
+        <div class="card__body-inner">
+          <span class="card__eyebrow">808 nm · 6–8 sesiones</span>
+          <h3 class="card__title">Depilación láser definitiva</h3>
+          <span class="card__meta">Hombres y mujeres</span>
+          <p class="card__body">
+            La longitud de onda que el folículo piloso absorbe como un imán.
+            Piel suave de verdad, sin retoques cada 3 semanas.
+          </p>
+          <span class="card__cta">Saber más</span>
+        </div>
       </article>
 
       <article class="card reveal" data-delay="2">
-        <div class="card__icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-            <path d="M3 3l18 18M3 21h18M9 9c0-3 6-3 6 0s-6 3-6 6 6 3 6 0M15 15c0 3 6 3 6 0" />
-          </svg>
+        <div class="card__media">
+          <img src="assets/img/servicio-card-tatuaje.webp" alt="Detalle de muñeca con tatuaje para eliminación con láser" loading="lazy" width="800" height="600" />
         </div>
-        <span class="card__eyebrow">Picosegundos · 4–8 sesiones</span>
-        <h3 class="card__title">Eliminación de tatuajes</h3>
-        <span class="card__meta">Multicolor</span>
-        <p class="card__body">
-          Pulsos de una billonésima de segundo que rompen el pigmento por onda de choque.
-          Sin calor, sin cicatriz, en los colores que otros láseres no pueden.
-        </p>
-        <span class="card__cta">Saber más</span>
+        <div class="card__body-inner">
+          <span class="card__eyebrow">Picosegundos · 4–8 sesiones</span>
+          <h3 class="card__title">Eliminación de tatuajes</h3>
+          <span class="card__meta">Multicolor</span>
+          <p class="card__body">
+            Pulsos de una billonésima de segundo que rompen el pigmento por onda de choque.
+            Sin calor, sin cicatriz, en los colores que otros láseres no pueden.
+          </p>
+          <span class="card__cta">Saber más</span>
+        </div>
       </article>
 
       <article class="card reveal" data-delay="3">
-        <div class="card__icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-            <path d="M3 12c2-3 5-3 7 0s5 3 7 0 4-3 4 0" />
-            <circle cx="12" cy="12" r="9" />
-          </svg>
+        <div class="card__media">
+          <img src="assets/img/servicio-tatuaje.webp" alt="Detalle de piel con micropigmentación para borrado" loading="lazy" width="800" height="600" />
         </div>
-        <span class="card__eyebrow">Picosegundos · 3–6 sesiones</span>
-        <h3 class="card__title">Borrado de micropigmentación</h3>
-        <span class="card__meta">Cejas · Labios · Eyeliner</span>
-        <p class="card__body">
-          Cejas, labios, eyeliner tatuado. Empieza de nuevo sin llevar la marca de lo que se fue.
-        </p>
-        <span class="card__cta">Saber más</span>
+        <div class="card__body-inner">
+          <span class="card__eyebrow">Picosegundos · 3–6 sesiones</span>
+          <h3 class="card__title">Borrado de micropigmentación</h3>
+          <span class="card__meta">Cejas · Labios · Eyeliner</span>
+          <p class="card__body">
+            Cejas, labios, eyeliner tatuado. Empieza de nuevo sin llevar la marca de lo que se fue.
+          </p>
+          <span class="card__cta">Saber más</span>
+        </div>
       </article>
 
       <article class="card reveal" data-delay="4">
-        <div class="card__icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-            <circle cx="12" cy="12" r="9" />
-            <circle cx="8" cy="10" r="1" fill="currentColor" />
-            <circle cx="15" cy="14" r="1.5" fill="currentColor" />
-            <circle cx="10" cy="16" r="0.5" fill="currentColor" />
-          </svg>
+        <div class="card__media">
+          <img src="assets/img/servicio-card-manchas.webp" alt="Detalle de rostro con manchas solares a tratar" loading="lazy" width="800" height="600" />
         </div>
-        <span class="card__eyebrow">Picosegundos · 2–4 sesiones</span>
-        <h3 class="card__title">Manchas y melasma</h3>
-        <span class="card__meta">Solares · Melasma · Pecas</span>
-        <p class="card__body">
-          Manchas del sol, léntigos, melasma con protocolo. Aclara, no promete milagros.
-        </p>
-        <span class="card__cta">Saber más</span>
+        <div class="card__body-inner">
+          <span class="card__eyebrow">Picosegundos · 2–4 sesiones</span>
+          <h3 class="card__title">Manchas y melasma</h3>
+          <span class="card__meta">Solares · Melasma · Pecas</span>
+          <p class="card__body">
+            Manchas del sol, léntigos, melasma con protocolo. Aclara, no promete milagros.
+          </p>
+          <span class="card__cta">Saber más</span>
+        </div>
       </article>
 
       <article class="card reveal" data-delay="5">
-        <div class="card__icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-            <path d="M12 3l1.5 4.5L18 9l-4.5 1.5L12 15l-1.5-4.5L6 9l4.5-1.5L12 3z" />
-          </svg>
+        <div class="card__media">
+          <img src="assets/img/servicio-rejuvenecimiento.webp" alt="Rostro de mujer madura con piel luminosa rejuvenecida" loading="lazy" width="800" height="600" />
         </div>
-        <span class="card__eyebrow">Picosegundos fraccional · 3–4 sesiones</span>
-        <h3 class="card__title">Rejuvenecimiento facial</h3>
-        <span class="card__meta">Textura · Luminosidad · Poros</span>
-        <p class="card__body">
-          Arrugas finas, piel apagada, luminosidad que se va. El láser le recuerda a tu piel cómo fabricar colágeno.
-        </p>
-        <span class="card__cta">Saber más</span>
+        <div class="card__body-inner">
+          <span class="card__eyebrow">Picosegundos fraccional · 3–4 sesiones</span>
+          <h3 class="card__title">Rejuvenecimiento facial</h3>
+          <span class="card__meta">Textura · Luminosidad · Poros</span>
+          <p class="card__body">
+            Arrugas finas, piel apagada, luminosidad que se va. El láser le recuerda a tu piel cómo fabricar colágeno.
+          </p>
+          <span class="card__cta">Saber más</span>
+        </div>
       </article>
 
       <article class="card reveal" data-delay="6">
-        <div class="card__icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-            <path d="M4 20l4-8 4 4 8-12" />
-            <circle cx="8" cy="12" r="1" fill="currentColor" />
-            <circle cx="12" cy="16" r="1" fill="currentColor" />
-          </svg>
+        <div class="card__media">
+          <img src="assets/img/servicio-cicatrices.webp" alt="Detalle de mejilla con cicatrices de acné para tratamiento" loading="lazy" width="800" height="600" />
         </div>
-        <span class="card__eyebrow">Picosegundos + 1320 nm · 3–6 sesiones</span>
-        <h3 class="card__title">Cicatrices y poros</h3>
-        <span class="card__meta">Acné · Poros · Marcas</span>
-        <p class="card__body">
-          La marca del acné, los poros que ya se notan. No se borra del todo,
-          pero se difumina hasta dejar de ser lo primero que se ve.
-        </p>
-        <span class="card__cta">Saber más</span>
+        <div class="card__body-inner">
+          <span class="card__eyebrow">Picosegundos + 1320 nm · 3–6 sesiones</span>
+          <h3 class="card__title">Cicatrices y poros</h3>
+          <span class="card__meta">Acné · Poros · Marcas</span>
+          <p class="card__body">
+            La marca del acné, los poros que ya se notan. No se borra del todo,
+            pero se difumina hasta dejar de ser lo primero que se ve.
+          </p>
+          <span class="card__cta">Saber más</span>
+        </div>
       </article>
 
     </div>
@@ -319,6 +344,9 @@
      ============================================ -->
 <section class="porque" id="porque">
   <div class="container">
+    <div class="porque__hero reveal-fade">
+      <img src="assets/img/porque-consulta.webp" alt="Consultorio de valoración médica" loading="lazy" width="1600" height="900" />
+    </div>
     <div class="porque__head">
       <div class="eyebrow">Lo que nos hace diferentes</div>
       <h2>Tres cosas que no cambian<br />en una industria que cambia <span class="h-italic">por moda</span>.</h2>
@@ -373,7 +401,7 @@
       <!-- Bloque A: 808 nm -->
       <div class="tech__block">
         <div class="tech__media clip-reveal">
-          <img src="assets/img/tecnologia-bloque-a.webp" alt="Piel iluminada con luz cálida, detalle de retrato" loading="lazy" />
+          <img src="assets/img/tecnologia-bloque-a.webp" alt="Piel iluminada con luz cálida, detalle de retrato" loading="lazy" / width="1920" height="1433">
         </div>
         <div>
           <span class="tech__num">01 · DIODO 808 NM</span>
@@ -403,7 +431,7 @@
       <!-- Bloque B: Picosegundos -->
       <div class="tech__block tech__block--reverse">
         <div class="tech__media clip-reveal">
-          <img src="assets/img/tecnologia-bloque-b.webp" alt="Detalle editorial de aplicación de láser facial" loading="lazy" />
+          <img src="assets/img/tecnologia-bloque-b.webp" alt="Detalle editorial de aplicación de láser facial" loading="lazy" / width="1920" height="1433">
         </div>
         <div>
           <span class="tech__num">02 · PICOSEGUNDOS</span>
@@ -465,6 +493,10 @@
       <p class="lead">
         No es magia, no es "te aplicamos y ya". Es un método que existe para que sepas exactamente qué pasa, cuándo y por qué.
       </p>
+    </div>
+
+    <div class="proceso__hero reveal-fade">
+      <img src="assets/img/proceso-plan.webp" alt="Plan de tratamiento personalizado escrito a mano" loading="lazy" width="1200" height="900" />
     </div>
 
     <div class="proceso__steps">
@@ -532,7 +564,7 @@
     <div class="quienes__grid">
       <article class="quienes__card reveal" data-delay="1">
         <div class="quienes__avatar">
-          <img src="assets/img/equipo-medico.webp" alt="Dra. responsable sanitario" loading="lazy" />
+          <img src="assets/img/equipo-medico.webp" alt="Dra. responsable sanitario" loading="lazy" / width="1792" height="2400">
         </div>
         <div class="quienes__role">Responsable sanitaria</div>
         <h3 class="quienes__name">[Nombre de la médica]</h3>
@@ -542,7 +574,7 @@
       </article>
       <article class="quienes__card reveal" data-delay="2">
         <div class="quienes__avatar">
-          <img src="assets/img/equipo-operadora.webp" alt="Operadora láser" loading="lazy" />
+          <img src="assets/img/equipo-operadora.webp" alt="Operadora láser" loading="lazy" / width="1792" height="2400">
         </div>
         <div class="quienes__role">Operadora láser</div>
         <h3 class="quienes__name">[Nombre de operadora]</h3>
@@ -552,7 +584,7 @@
       </article>
       <article class="quienes__card reveal" data-delay="3">
         <div class="quienes__avatar">
-          <img src="assets/img/proceso-valoracion.webp" alt="Fundadora de LaserMed" loading="lazy" />
+          <img src="assets/img/proceso-valoracion.webp" alt="Fundadora de LaserMed" loading="lazy" / width="1792" height="2400">
         </div>
         <div class="quienes__role">Fundadora</div>
         <h3 class="quienes__name">[Nombre de fundadora]</h3>
@@ -584,22 +616,22 @@
 
     <div class="espacio__grid">
       <div class="espacio__item">
-        <img src="assets/img/espacio-cabina.webp" alt="Cabina principal de tratamiento" loading="lazy" />
+        <img src="assets/img/espacio-cabina.webp" alt="Cabina principal de tratamiento" loading="lazy" / width="1920" height="1071">
       </div>
       <div class="espacio__item">
-        <img src="assets/img/espacio-sala-espera.webp" alt="Sala de espera" loading="lazy" />
+        <img src="assets/img/espacio-sala-espera.webp" alt="Sala de espera" loading="lazy" / width="1920" height="1433">
       </div>
       <div class="espacio__item">
-        <img src="assets/img/espacio-detalle-equipo.webp" alt="Detalle de la pieza de mano del equipo láser" loading="lazy" />
+        <img src="assets/img/espacio-detalle-equipo.webp" alt="Detalle de la pieza de mano del equipo láser" loading="lazy" / width="1920" height="1920">
       </div>
       <div class="espacio__item">
-        <img src="assets/img/espacio-decoracion.webp" alt="Detalle de decoración del espacio" loading="lazy" />
+        <img src="assets/img/espacio-decoracion.webp" alt="Detalle de decoración del espacio" loading="lazy" / width="1920" height="1433">
       </div>
       <div class="espacio__item">
-        <img src="assets/img/hero-2.webp" alt="Detalle del espacio y la luz" loading="lazy" />
+        <img src="assets/img/hero-2.webp" alt="Detalle del espacio y la luz" loading="lazy" / width="1792" height="2400">
       </div>
       <div class="espacio__item">
-        <img src="assets/img/tecnologia-abstract.webp" alt="Detalle de la piel" loading="lazy" />
+        <img src="assets/img/tecnologia-abstract.webp" alt="Detalle de la piel" loading="lazy" / width="1920" height="1920">
       </div>
     </div>
   </div>
@@ -620,6 +652,10 @@
       y no garantizamos el mismo resultado en todos los casos.
     </p>
 
+    <div class="resultados__cover reveal-fade">
+      <img src="assets/img/resultados-portada.webp" alt="Piel luminosa y cuidada, resultado de tratamientos láser" loading="lazy" width="1600" height="900" />
+    </div>
+
     <div class="resultados__empty reveal">
       <strong>Próximamente</strong>
       Subiremos aquí los casos con consentimiento firmado.
@@ -639,6 +675,10 @@
       <p class="lead">
         El costo total de tu plan te lo decimos en la valoración. Sin sorpresas, sin "preguntas para saber cuánto".
       </p>
+    </div>
+
+    <div class="precios__hero reveal-fade">
+      <img src="assets/img/precios-equipo.webp" alt="Pieza de mano del equipo láser sobre superficie de mármol" loading="lazy" width="1200" height="900" />
     </div>
 
     <div class="precios__tabla">
@@ -771,6 +811,10 @@
       <h2>Lo que más<br />nos <span class="h-italic">preguntan</span>.</h2>
     </div>
 
+    <div class="faq__media reveal-fade">
+      <img src="assets/img/faq-textura.webp" alt="Textura de lino beige con rama seca" loading="lazy" width="1200" height="800" />
+    </div>
+
     <div class="faq__list">
 
       <details class="faq__item">
@@ -876,13 +920,12 @@
           <defs>
             <linearGradient id="agente-grad" x1="0" x2="1" y1="0" y2="0">
               <stop offset="0%" stop-color="#c9603d" stop-opacity="0" />
-              <stop offset="30%" stop-color="#c9603d" stop-opacity="0.8" />
-              <stop offset="70%" stop-color="#e8b89e" stop-opacity="0.8" />
+              <stop offset="30%" stop-color="#c9603d" stop-opacity="0.9" />
+              <stop offset="70%" stop-color="#e8b89e" stop-opacity="0.9" />
               <stop offset="100%" stop-color="#e8b89e" stop-opacity="0" />
             </linearGradient>
           </defs>
-          <g fill="none" stroke="url(#agente-grad)" stroke-width="1.5" stroke-linecap="round">
-            <!-- Animated waveform bars -->
+          <g fill="none" stroke="url(#agente-grad)" stroke-width="2" stroke-linecap="round">
             <line class="ag-bar" x1="20" y1="100" x2="20" y2="100" />
             <line class="ag-bar" x1="40" y1="100" x2="40" y2="100" />
             <line class="ag-bar" x1="60" y1="100" x2="60" y2="100" />
@@ -935,6 +978,9 @@
      13 · CTA FINAL + CONTACTO
      ============================================ -->
 <section class="cta-final" id="contacto">
+  <div class="cta-final__bg" aria-hidden="true">
+    <img src="assets/img/cta-final.webp" alt="" loading="lazy" width="1200" height="900" />
+  </div>
   <div class="container cta-final__inner">
     <div class="eyebrow" style="justify-content: center;">Empieza aquí</div>
     <h2 class="cta-final__h2">

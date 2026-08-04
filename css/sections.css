@@ -225,23 +225,49 @@
    ============================================ */
 
 .pregunta {
-  text-align: center;
-  padding: var(--sp-20) 0 var(--sp-16);
+  padding: var(--sp-20) 0;
+}
+
+.pregunta__container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--sp-12);
+  align-items: center;
+}
+
+@media (min-width: 800px) {
+  .pregunta__container {
+    grid-template-columns: 1fr 1.2fr;
+    gap: var(--sp-16);
+  }
+}
+
+.pregunta__media {
+  border-radius: var(--r-lg);
+  overflow: hidden;
+  aspect-ratio: 3 / 2;
+  position: relative;
+  background: var(--lm-bg-2);
+  contain: layout paint;
+}
+
+.pregunta__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .pregunta__h2 {
-  max-width: 18ch;
-  margin: 0 auto var(--sp-8);
+  margin-bottom: var(--sp-8);
   font-size: clamp(40px, 6vw, 80px);
   line-height: 1.05;
 }
 
 .pregunta__body {
-  max-width: 56ch;
-  margin: 0 auto;
   font-size: var(--fs-body-lg);
   color: var(--lm-ink-2);
   line-height: 1.6;
+  max-width: 50ch;
 }
 
 /* ============================================
@@ -293,6 +319,21 @@
    4. POR QUÉ LASERMED
    ============================================ */
 
+.porque__hero {
+  border-radius: var(--r-lg);
+  overflow: hidden;
+  aspect-ratio: 16 / 9;
+  margin-bottom: var(--sp-16);
+  background: var(--lm-bg-2);
+  contain: layout paint;
+}
+
+.porque__hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 .porque__head {
   text-align: center;
   max-width: 720px;
@@ -339,6 +380,9 @@
 .tech {
   background: var(--lm-bg-dark);
   color: var(--lm-ink-inv);
+  /* Performance: skip rendering de lo que está fuera del viewport */
+  content-visibility: auto;
+  contain-intrinsic-size: 1px 1200px;
 }
 
 .tech__head {
@@ -377,6 +421,9 @@
   overflow: hidden;
   position: relative;
   background: var(--lm-bg-dark-2);
+  /* GPU acceleration para animaciones */
+  transform: translateZ(0);
+  backface-visibility: hidden;
 }
 
 .tech__media img {
@@ -486,6 +533,21 @@
 
 .proceso {
   background: var(--lm-bg-2);
+}
+
+.proceso__hero {
+  border-radius: var(--r-lg);
+  overflow: hidden;
+  aspect-ratio: 4 / 3;
+  margin-bottom: var(--sp-16);
+  background: white;
+  contain: layout paint;
+}
+
+.proceso__hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .proceso__head {
@@ -649,6 +711,8 @@
 .espacio {
   background: var(--lm-bg-dark);
   color: var(--lm-ink-inv);
+  content-visibility: auto;
+  contain-intrinsic-size: 1px 900px;
 }
 
 .espacio__head {
@@ -725,6 +789,21 @@
   line-height: 1.5;
 }
 
+.resultados__cover {
+  border-radius: var(--r-lg);
+  overflow: hidden;
+  aspect-ratio: 16 / 9;
+  margin-bottom: var(--sp-8);
+  background: var(--lm-bg-2);
+  contain: layout paint;
+}
+
+.resultados__cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 .resultados__empty {
   text-align: center;
   padding: var(--sp-16) var(--sp-8);
@@ -752,6 +831,21 @@
   text-align: center;
   max-width: 700px;
   margin: 0 auto var(--sp-12);
+}
+
+.precios__hero {
+  border-radius: var(--r-lg);
+  overflow: hidden;
+  aspect-ratio: 4 / 3;
+  margin-bottom: var(--sp-12);
+  background: white;
+  contain: layout paint;
+}
+
+.precios__hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .precios__tabla {
@@ -845,7 +939,23 @@
 .faq__head {
   text-align: center;
   max-width: 700px;
+  margin: 0 auto var(--sp-12);
+}
+
+.faq__media {
+  border-radius: var(--r-lg);
+  overflow: hidden;
+  aspect-ratio: 3 / 2;
+  max-width: 800px;
   margin: 0 auto var(--sp-16);
+  background: var(--lm-bg-2);
+  contain: layout paint;
+}
+
+.faq__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .faq__list {
@@ -947,6 +1057,43 @@
   height: auto;
 }
 
+/* Wave bars: animación CSS pura, sin JS por frame */
+.agente__wave .ag-bar {
+  transform-origin: center;
+  transform-box: fill-box;
+  animation: ag-bar 1.4s var(--ease-in-out) infinite;
+  will-change: transform;
+}
+
+.agente__wave .ag-bar:nth-child(1)  { animation-delay: 0.00s; }
+.agente__wave .ag-bar:nth-child(2)  { animation-delay: 0.06s; }
+.agente__wave .ag-bar:nth-child(3)  { animation-delay: 0.12s; }
+.agente__wave .ag-bar:nth-child(4)  { animation-delay: 0.18s; }
+.agente__wave .ag-bar:nth-child(5)  { animation-delay: 0.24s; }
+.agente__wave .ag-bar:nth-child(6)  { animation-delay: 0.30s; }
+.agente__wave .ag-bar:nth-child(7)  { animation-delay: 0.36s; }
+.agente__wave .ag-bar:nth-child(8)  { animation-delay: 0.42s; }
+.agente__wave .ag-bar:nth-child(9)  { animation-delay: 0.48s; }
+.agente__wave .ag-bar:nth-child(10) { animation-delay: 0.54s; }
+.agente__wave .ag-bar:nth-child(11) { animation-delay: 0.60s; }
+.agente__wave .ag-bar:nth-child(12) { animation-delay: 0.66s; }
+.agente__wave .ag-bar:nth-child(13) { animation-delay: 0.72s; }
+.agente__wave .ag-bar:nth-child(14) { animation-delay: 0.78s; }
+.agente__wave .ag-bar:nth-child(15) { animation-delay: 0.84s; }
+.agente__wave .ag-bar:nth-child(16) { animation-delay: 0.90s; }
+.agente__wave .ag-bar:nth-child(17) { animation-delay: 0.96s; }
+.agente__wave .ag-bar:nth-child(18) { animation-delay: 1.02s; }
+.agente__wave .ag-bar:nth-child(19) { animation-delay: 1.08s; }
+
+@keyframes ag-bar {
+  0%, 100% { transform: scaleY(0.3); }
+  50%      { transform: scaleY(2.4); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .agente__wave .ag-bar { animation: none; transform: scaleY(1.2); }
+}
+
 .agente__btn {
   position: absolute;
   bottom: 20%;
@@ -998,6 +1145,31 @@
   text-align: center;
   position: relative;
   overflow: hidden;
+}
+
+.cta-final__bg {
+  position: absolute;
+  top: 0;
+  right: -10%;
+  bottom: 0;
+  width: 60%;
+  pointer-events: none;
+  opacity: 0.4;
+  z-index: 0;
+}
+
+.cta-final__bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: var(--r-lg) 0 0 var(--r-lg);
+  mask-image: linear-gradient(90deg, transparent 0%, black 30%);
+  -webkit-mask-image: linear-gradient(90deg, transparent 0%, black 30%);
+}
+
+@media (max-width: 900px) {
+  .cta-final__bg { display: none; }
 }
 
 .cta-final__inner {

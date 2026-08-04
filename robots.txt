@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /docs/raw/
+
+Sitemap: https://lasermed.abdev.click/sitemap.xml

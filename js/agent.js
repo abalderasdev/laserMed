@@ -1,6 +1,6 @@
 /* ============================================
    LaserMed · Agente AI (ElevenLabs)
-   Stub de integración · reemplazable con la API real
+   Stub de integración · reemplazable
    ============================================ */
 
 (function () {
@@ -13,23 +13,14 @@
 
   if (!trigger || !modal) return;
 
-  // Configuración del agente (reemplazar con el agent_id real)
   const ELEVENLABS_CONFIG = {
     agentId: 'TU_AGENT_ID_DE_ELEVENLABS',
-    // Opcionales:
-    serverUrl: null, // Si usas servidor propio para signed URL
-    // ui: { ... }, // Customizaciones de UI
   };
-
-  /* ============================================
-     Modal
-     ============================================ */
 
   const openModal = () => {
     modal.hidden = false;
     document.body.style.overflow = 'hidden';
-    setTimeout(() => modal.classList.add('is-open'), 10);
-
+    requestAnimationFrame(() => modal.classList.add('is-open'));
     if (!initialized) {
       initElevenLabs();
       initialized = true;
@@ -43,38 +34,32 @@
   };
 
   trigger.addEventListener('click', openModal);
-
   document.querySelectorAll('[data-close]', modal).forEach((el) => {
     el.addEventListener('click', closeModal);
   });
-
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && !modal.hidden) closeModal();
   });
 
-  /* ============================================
-     ElevenLabs Embed
-     ============================================ */
-
   async function initElevenLabs() {
-    // Si ya está el script cargado, inicializar widget
     if (window.ElevenLabs) {
       try {
-        await window.ElevenLabs.init();
+        if (window.ElevenLabs.mount) {
+          await window.ElevenLabs.mount(widgetContainer, ELEVENLABS_CONFIG);
+        } else if (window.ElevenLabs.init) {
+          await window.ElevenLabs.init();
+        }
       } catch (e) {
-        console.warn('ElevenLabs init falló:', e);
         showFallback(e.message);
       }
       return;
     }
 
-    // Cargar script
     const script = document.createElement('script');
     script.src = 'https://elevenlabs.io/convai-widget/index.js';
     script.async = true;
     script.onload = async () => {
       try {
-        // Inicializar widget en el container
         if (window.ElevenLabs && window.ElevenLabs.mount) {
           await window.ElevenLabs.mount(widgetContainer, ELEVENLABS_CONFIG);
         } else if (window.Convai) {
@@ -87,7 +72,6 @@
       }
     };
     script.onerror = () => showFallback('No se pudo cargar ElevenLabs. Verifica tu conexión.');
-
     document.head.appendChild(script);
   }
 

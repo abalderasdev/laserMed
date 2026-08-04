@@ -349,10 +349,50 @@
   background: white;
   border: 1px solid var(--lm-border);
   border-radius: var(--r-lg);
+  transition: all var(--dur) var(--ease-out);
+  position: relative;
+  overflow: hidden;
+  /* Performance: layout aislado */
+  contain: layout paint;
+}
+
+.card--padded { padding: var(--sp-8); }
+.card--padded:hover {
+  border-color: var(--lm-accent);
+  box-shadow: var(--lm-shadow);
+}
+
+.card__media {
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  position: relative;
+  background: var(--lm-bg-2);
+}
+
+.card__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 1.2s var(--ease-out);
+}
+
+.card:hover .card__media img {
+  transform: scale(1.05);
+}
+
+.card__body-inner {
+  padding: var(--sp-6) var(--sp-8) var(--sp-8);
+}
+
+.card--full {
+  background: white;
+  border: 1px solid var(--lm-border);
+  border-radius: var(--r-lg);
   padding: var(--sp-8);
   transition: all var(--dur) var(--ease-out);
   position: relative;
   overflow: hidden;
+  contain: layout paint;
 }
 
 .card--alt {
@@ -365,9 +405,8 @@
   border-color: var(--lm-border-dark);
 }
 
-.card:hover {
+.card--full:hover {
   border-color: var(--lm-accent);
-  transform: translateY(-4px);
   box-shadow: var(--lm-shadow);
 }
 
