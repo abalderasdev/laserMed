@@ -1,0 +1,250 @@
+/* ============================================
+   LaserMed · Base
+   Typography, layout primitives
+   ============================================ */
+
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,300..900,0..100;1,9..144,300..900,0..100&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap");
+
+body {
+  font-size: var(--fs-body);
+  line-height: 1.6;
+  background: var(--lm-bg);
+  color: var(--lm-ink);
+}
+
+/* ---------- Containers ---------- */
+.container {
+  width: 100%;
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding-left: var(--pad-x);
+  padding-right: var(--pad-x);
+}
+
+.container--narrow {
+  max-width: var(--max-w-narrow);
+}
+
+.container--wide {
+  max-width: var(--max-w-wide);
+}
+
+/* ---------- Section spacing ---------- */
+section {
+  position: relative;
+  padding-top: clamp(80px, 10vw, 160px);
+  padding-bottom: clamp(80px, 10vw, 160px);
+}
+
+.section--tight {
+  padding-top: clamp(48px, 6vw, 96px);
+  padding-bottom: clamp(48px, 6vw, 96px);
+}
+
+.section--alt {
+  background: var(--lm-bg-2);
+}
+
+.section--dark {
+  background: var(--lm-bg-dark);
+  color: var(--lm-ink-inv);
+}
+
+.section--dark-2 {
+  background: var(--lm-bg-dark-2);
+  color: var(--lm-ink-inv);
+}
+
+/* ---------- Eyebrow ---------- */
+.eyebrow {
+  font-family: var(--font-sans);
+  font-size: var(--fs-eyebrow);
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--lm-ink-2);
+  margin-bottom: var(--sp-6);
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sp-2);
+}
+
+.eyebrow::before {
+  content: "";
+  width: 24px;
+  height: 1px;
+  background: var(--lm-accent);
+  display: inline-block;
+}
+
+.section--dark .eyebrow {
+  color: var(--lm-ink-inv-2);
+}
+
+.section--dark .eyebrow::before {
+  background: var(--lm-accent);
+}
+
+/* ---------- Headings ---------- */
+h1, .h1 {
+  font-family: var(--font-serif);
+  font-size: var(--fs-h1);
+  line-height: 0.95;
+  letter-spacing: -0.02em;
+  font-weight: 350;
+  font-variation-settings: "opsz" 144, "SOFT" 30;
+}
+
+h2, .h2 {
+  font-family: var(--font-serif);
+  font-size: var(--fs-h2);
+  line-height: 1.05;
+  letter-spacing: -0.015em;
+  font-weight: 400;
+  font-variation-settings: "opsz" 100, "SOFT" 40;
+  margin-bottom: var(--sp-8);
+}
+
+h3, .h3 {
+  font-family: var(--font-serif);
+  font-size: var(--fs-h3);
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+  font-weight: 500;
+  font-variation-settings: "opsz" 60, "SOFT" 30;
+  margin-bottom: var(--sp-6);
+}
+
+h4, .h4 {
+  font-family: var(--font-sans);
+  font-size: var(--fs-h4);
+  line-height: 1.2;
+  font-weight: 600;
+  margin-bottom: var(--sp-4);
+}
+
+h5, .h5 {
+  font-family: var(--font-sans);
+  font-size: var(--fs-h5);
+  line-height: 1.25;
+  font-weight: 600;
+  margin-bottom: var(--sp-3);
+}
+
+h6, .h6 {
+  font-family: var(--font-sans);
+  font-size: var(--fs-h6);
+  line-height: 1.3;
+  font-weight: 600;
+  margin-bottom: var(--sp-3);
+}
+
+/* Emphasis italics (for accent word) */
+.h-italic {
+  font-style: italic;
+  font-variation-settings: "opsz" 144, "SOFT" 100;
+  color: var(--lm-accent);
+}
+
+.section--dark .h-italic {
+  color: var(--lm-accent-soft);
+}
+
+/* ---------- Body ---------- */
+p {
+  max-width: 62ch;
+  margin-bottom: var(--sp-5);
+}
+
+.lead {
+  font-size: var(--fs-body-lg);
+  line-height: 1.55;
+  color: var(--lm-ink-2);
+  max-width: 56ch;
+  margin-bottom: var(--sp-8);
+}
+
+.section--dark .lead,
+.section--dark p {
+  color: var(--lm-ink-inv-2);
+}
+
+/* ---------- Caption / small ---------- */
+.caption {
+  font-size: var(--fs-caption);
+  color: var(--lm-ink-2);
+  line-height: 1.5;
+}
+
+.caption--mono {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.02em;
+}
+
+.section--dark .caption {
+  color: var(--lm-ink-inv-2);
+}
+
+/* ---------- Links ---------- */
+.link {
+  color: var(--lm-accent);
+  font-weight: 500;
+  border-bottom: 1px solid transparent;
+  transition: border-color var(--dur-fast) var(--ease-out);
+}
+
+.link:hover {
+  border-bottom-color: var(--lm-accent);
+}
+
+/* ---------- Divider ---------- */
+.divider {
+  width: 100%;
+  height: 1px;
+  background: var(--lm-border);
+  border: 0;
+  margin: 0;
+}
+
+.section--dark .divider {
+  background: var(--lm-border-dark);
+}
+
+/* ---------- Numerals ---------- */
+.numeral {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: 300;
+  font-size: var(--fs-eyebrow);
+  letter-spacing: 0.18em;
+  color: var(--lm-accent);
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: var(--sp-4);
+}
+
+/* ---------- Selection ---------- */
+::selection {
+  background: var(--lm-accent);
+  color: var(--lm-ink-inv);
+}
+
+/* ---------- Focus ---------- */
+:focus-visible {
+  outline: 2px solid var(--lm-accent);
+  outline-offset: 4px;
+  border-radius: 2px;
+}
+
+button:focus,
+a:focus {
+  outline: none;
+}
+
+button:focus-visible,
+a:focus-visible {
+  outline: 2px solid var(--lm-accent);
+  outline-offset: 4px;
+  border-radius: 4px;
+}

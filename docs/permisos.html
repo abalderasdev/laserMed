@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Instrucciones de permisos · LaserMed · Documentación</title>
+  <meta name="description" content="Paso a paso para regularizar la clínica" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23c9603d'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-family='serif' font-size='18' fill='%23f8f5ef' font-weight='500'%3EL%3C/text%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,300..900,0..100;1,9..144,300..900,0..100&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../docs-assets/docs.css" />
+</head>
+<body>
+
+<header class="docs-nav">
+  <div class="docs-nav__inner">
+    <a href="../index.html" class="docs-nav__logo">
+      <span class="docs-nav__mark">L</span>
+      <span>LaserMed</span>
+    </a>
+    <nav class="docs-nav__links">
+      <a href="../index.html">← Volver a la landing</a>
+      <a href="index.html">Documentación</a>
+      <a href="raw/permisos.md">Descargar .md</a>
+    </nav>
+  </div>
+</header>
+
+<main class="docs-main">
+
+<header class="docs-header">
+  <div class="docs-container">
+    <div class="docs-header__eyebrow">Documentación del proyecto</div>
+    <h1 class="docs-header__title">Instrucciones de permisos</h1>
+    <p class="docs-header__tagline">Paso a paso para regularizar la clínica</p>
+  </div>
+</header>
+
+<article class="docs-article">
+  <div class="docs-container">
+    <p><strong>Para entregar al cliente · Versión 1.0 · Agosto 2026</strong></p>
+<blockquote>
+<p>Este documento le dice paso a paso qué necesita LaserMed para operar legalmente en México, qué debe tener listo antes de abrir, qué debe renovar periódicamente, y qué NO puede hacer sin un trámite previo. Está escrito para que el dueño (Alberto o quien designe) lo pueda ejecutar sin ayuda legal, aunque se recomienda asesoría contable y legal para algunos pasos.</p>
+</blockquote>
+<hr />
+<h2 id="1-resumen-ejecutivo">1. Resumen ejecutivo</h2>
+<table>
+<thead>
+<tr>
+<th>Trámite</th>
+<th>¿Lo necesita LaserMed?</th>
+<th>Costo</th>
+<th>Tiempo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>RFC (persona física o moral)</td>
+<td>Sí</td>
+<td>Gratis</td>
+<td>1 día</td>
+</tr>
+<tr>
+<td>Alta de actividad en SAT</td>
+<td>Sí</td>
+<td>Gratis</td>
+<td>1 día</td>
+</tr>
+<tr>
+<td>Aviso de Funcionamiento COFEPRIS</td>
+<td><strong>Sí, obligatorio</strong></td>
+<td><strong>Gratis</strong></td>
+<td>5–10 días hábiles</td>
+</tr>
+<tr>
+<td>Aviso de Responsable Sanitario</td>
+<td><strong>Sí, parte del anterior</strong></td>
+<td><strong>Gratis</strong></td>
+<td>—</td>
+</tr>
+<tr>
+<td>Aviso publicitario COFEPRIS</td>
+<td><strong>Sí, por tener web y redes</strong></td>
+<td><strong>Gratis</strong></td>
+<td>5–10 días hábiles</td>
+</tr>
+<tr>
+<td>Licencia Sanitaria</td>
+<td><strong>NO</strong> (láser no es quirúrgico)</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Permiso de Rayos X</td>
+<td><strong>NO</strong> (láser no es radiación ionizante)</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Licencia de uso de suelo del local</td>
+<td>Sí (municipal)</td>
+<td>Variable</td>
+<td>15–30 días</td>
+</tr>
+<tr>
+<td>Póliza de RC profesional</td>
+<td>Recomendado, no obligatorio</td>
+<td>$5,000–$20,000/año</td>
+<td>1–3 días</td>
+</tr>
+<tr>
+<td>Alta patronal IMSS (si hay empleados)</td>
+<td>Sí, si hay empleados</td>
+<td>—</td>
+<td>1 día</td>
+</tr>
+<tr>
+<td>Aviso de privacidad LFPDPPP</td>
+<td>Obligatorio</td>
+<td>Gratis (plantilla)</td>
+<td>1–2 días</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Conclusión:</strong> LaserMed necesita esencialmente <strong>3 trámites ante COFEPRIS (todos gratuitos) + RFC + uso de suelo + privacidad + RC profesional</strong>. Con eso puede operar.</p>
+</blockquote>
+<hr />
+<h2 id="2-antes-de-empezar">2. Antes de empezar</h2>
+<p>Necesitas tener listo:</p>
+<ul>
+<li>[ ] <strong>Local definido</strong> (arrendamiento firmado o escritura a nombre del negocio).</li>
+<li>[ ] <strong>Equipo láser adquirido</strong> (con factura, registro sanitario y manual en español).</li>
+<li>[ ] <strong>Médico responsable sanitario identificado</strong> (con cédula profesional vigente).</li>
+<li>[ ] <strong>Personal operador identificado</strong> (con constancias de capacitación en el equipo).</li>
+<li>[ ] <strong>RFC de la persona física o moral</strong> que operará el negocio.</li>
+<li>[ ] <strong>Correo electrónico</strong> y <strong>e.firma del SAT</strong> (si operas como persona moral, o si el RFC es de representante legal).</li>
+</ul>
+<hr />
+<h2 id="3-paso-a-paso">3. Paso a paso</h2>
+<h3 id="paso-1-rfc-y-alta-de-actividad-sat">PASO 1 · RFC y alta de actividad (SAT)</h3>
+<p><strong>Días:</strong> 1
+<strong>Costo:</strong> Gratis
+<strong>Dónde:</strong> sat.gob.mx o citas SAT</p>
+<ol>
+<li>Si no tienes RFC, sácalo en el SAT (persona física con CURP y comprobante de domicilio).</li>
+<li>Si operas como persona moral (recomendado para clínicas), necesitas:
+   - Acta constitutiva (notario).
+   - RFC de la empresa.
+   - e.firma del representante legal.</li>
+<li>Alta de actividad económica: incluye los códigos SCIAN que correspondan a servicios de estética (621111, 621113, 812110) y comercio al por menor de artículos de belleza (465915 si vendes productos).</li>
+</ol>
+<hr />
+<h3 id="paso-2-contrato-de-arrendamiento-escritura-del-local">PASO 2 · Contrato de arrendamiento / escritura del local</h3>
+<p><strong>Días:</strong> Variable
+<strong>Costo:</strong> Renta + depósito
+<strong>Dónde:</strong> Notaría o contrato privado con el arrendador</p>
+<p>Recomendaciones:
+- Contrato mínimo 2 años con opción a prórroga.
+- Permitir uso comercial y de servicios de salud/estética.
+- Permitir instalación de equipo y señalización exterior.
+- Incluir permiso para hacer adaptaciones menores (pintura, contactos, plafón).</p>
+<hr />
+<h3 id="paso-3-aviso-de-funcionamiento-cofepris-cofepris-05-036">PASO 3 · Aviso de Funcionamiento COFEPRIS (COFEPRIS-05-036)</h3>
+<p><strong>Días:</strong> 5–10 días hábiles
+<strong>Costo:</strong> <strong>Gratis</strong>
+<strong>Dónde:</strong> https://tramiteselectronicos02.cofepris.gob.mx/ (en línea, con e.firma) o CIS presencial con cita</p>
+<p><strong>Documentos requeridos:</strong>
+- Formato oficial COFEPRIS-05-036 (se llena en plataforma o en ventanilla).
+- Identificación oficial del representante legal (INE/IFE, pasaporte, cédula profesional).
+- RFC de la persona física o moral.
+- Comprobante de domicilio del local (recibo de luz, agua, predial) — menos de 3 meses de antigüedad.
+- Acta constitutiva (si eres persona moral) o constancia de situación fiscal.
+- Poder notarial (si el representante legal no aparece en el acta).
+- Aviso de Responsable Sanitario (COFEPRIS-05-037, parte del mismo trámite) con:
+  - Nombre completo del médico.
+  - Cédula profesional (copia).
+  - Título profesional (copia).
+  - Comprobante de domicilio del médico.
+  - Carta de aceptación del cargo firmada por el médico.
+  - Horario de asistencia del responsable sanitario.
+- Descripción detallada de los servicios que se ofrecerán.
+- <strong>Plano del local</strong> (croquis de distribución con áreas: recepción, sala de espera, cabina, sanitario, etc.).
+- Memoria descriptiva del local (tamaño, materiales, iluminación, ventilación, sanitarios).
+- Reglamento interior del establecimiento (puede ser una página con horarios, políticas, etc.).
+- <strong>Copia del registro sanitario del equipo láser</strong> (del fabricante o importador).
+- <strong>Copia del manual de operación del equipo</strong> en español.
+- <strong>Constancias de capacitación</strong> del personal que operará el equipo (firmadas, con programa, horas, instructor).</p>
+<p><strong>Cómo presentar en línea:</strong>
+1. Entra a https://tramiteselectronicos02.cofepris.gob.mx/
+2. Crea cuenta o inicia sesión con e.firma.
+3. Selecciona &ldquo;Aviso de Funcionamiento y de Responsable Sanitario&rdquo; (COFEPRIS-05-036).
+4. Llena el formulario con los datos del establecimiento.
+5. Adjunta los documentos en PDF.
+6. Firma con e.firma.
+7. Espera la confirmación (5–10 días hábiles).
+8. <strong>Imprime el acuse</strong> y exhibelo en un lugar visible del local.</p>
+<p><strong>Cómo presentar presencial:</strong>
+1. Agenda cita en el CIS de tu entidad: https://www.gob.mx/cofepris/acciones-y-programas/centros-integrales-de-servicios-cis
+2. Lleva los documentos en original y copia.
+3. Espera la resolución en ventanilla.</p>
+<p><strong>Vigencia:</strong> Indefinida (mientras no cambies domicilio, giro o representante legal).
+<strong>Si cambias algo:</strong> Debes presentar Aviso de Modificación (COFEPRIS-05-056) en menos de 30 días.</p>
+<hr />
+<h3 id="paso-4-aviso-publicitario-cofepris-05-058">PASO 4 · Aviso publicitario (COFEPRIS-05-058)</h3>
+<p><strong>Días:</strong> 5–10 días hábiles
+<strong>Costo:</strong> <strong>Gratis</strong>
+<strong>Cuándo:</strong> Antes de publicar cualquier anuncio (redes sociales, Google Ads, folletos, mantas, página web).</p>
+<p><strong>Documentos:</strong>
+- Formato COFEPRIS-05-058.
+- Identificación del solicitante.
+- RFC.
+- Comprobante de domicilio.
+- <strong>Muestras del material publicitario</strong> (imágenes o PDFs de los anuncios, posts, banners, etc.).
+- Si es persona moral: acta constitutiva y poder del representante.</p>
+<p><strong>Importante:</strong> Este aviso protege al negocio si COFEPRIS revisa la publicidad. La multa por publicidad sin aviso es de $40,000 a $400,000 MXN.</p>
+<p><strong>Vigencia:</strong> 1 año. Se renueva.</p>
+<hr />
+<h3 id="paso-5-licencia-de-uso-de-suelo">PASO 5 · Licencia de uso de suelo</h3>
+<p><strong>Días:</strong> 15–30 días
+<strong>Costo:</strong> Variable por municipio
+<strong>Dónde:</strong> Alcaldía o municipio</p>
+<ul>
+<li>Acude a la ventanilla de la alcaldía/municipio donde está el local.</li>
+<li>Solicita la &ldquo;Licencia de Uso de Suelo&rdquo; o &ldquo;Constancia de Zonificación&rdquo;.</li>
+<li>Verifica que el uso comercial y de servicios esté permitido en la zona.</li>
+<li>Si el local no cumple, busca otro.</li>
+</ul>
+<hr />
+<h3 id="paso-6-poliza-de-responsabilidad-civil-profesional">PASO 6 · Póliza de Responsabilidad Civil profesional</h3>
+<p><strong>Días:</strong> 1–3
+<strong>Costo:</strong> $5,000–$20,000 MXN/año
+<strong>Dónde:</strong> Aseguradora (GNP, AXA, Zurich, Mapfre, etc.)</p>
+<p><strong>Recomendaciones:</strong>
+- Cobertura mínima $1,000,000 MXN.
+- Cubre al médico responsable y a los operadores.
+- Cubre actos derivados de mala práctica, errores en parámetros, lesiones.
+- Es la diferencia entre un cierre y una crisis resuelta.</p>
+<hr />
+<h3 id="paso-7-aviso-de-privacidad-lfpdppp">PASO 7 · Aviso de Privacidad (LFPDPPP)</h3>
+<p><strong>Días:</strong> 1–2
+<strong>Costo:</strong> Gratis (plantilla)
+<strong>Dónde:</strong> www.gob.mx/profeco</p>
+<p><strong>Requisitos:</strong>
+- Aviso de Privacidad en formato impreso (a la vista en el local).
+- Aviso de Privacidad en formato digital (en tu sitio web, link en footer).
+- Política de manejo de datos y cookies si tienes web.
+- Designar un responsable de datos (puede ser el dueño).
+- Llevar bitácora de consentimientos firmados por cada paciente.</p>
+<p><strong>Plantilla sugerida en:</strong> https://www.gob.mx/profeco/documentos/aviso-de-privacidad</p>
+<hr />
+<h3 id="paso-8-alta-patronal-imss-si-hay-empleados">PASO 8 · Alta patronal IMSS (si hay empleados)</h3>
+<p><strong>Días:</strong> 1
+<strong>Costo:</strong> — (las cuotas se pagan mensualmente)
+<strong>Dónde:</strong> imss.gob.mx</p>
+<p>Si contratas personal (operadoras, recepcionista, médico adicional):
+- Alta de patrón.
+- Alta de cada trabajador.
+- Inscripción al seguro (enfermedad, riesgos de trabajo, retiro, cesantía, vivienda).</p>
+<hr />
+<h3 id="paso-9-infraestructura-fisica-del-local">PASO 9 · Infraestructura física del local</h3>
+<p><strong>Checklist antes de abrir:</strong></p>
+<ul>
+<li>[ ] Pisos lavables (loseta, vinílico grado médico, sin alfombras).</li>
+<li>[ ] Muros pintados con pintura epóxica o vinílica lavable.</li>
+<li>[ ] Techo sin filtraciones, fácil de limpiar.</li>
+<li>[ ] Iluminación suficiente en cabina (mínimo 500 lux en zona de tratamiento).</li>
+<li>[ ] Sistema de ventilación (aire acondicionado o extractor).</li>
+<li>[ ] Sanitario para pacientes con lavabo, jabón y papel.</li>
+<li>[ ] <strong>Rótulo visible</strong> con:</li>
+<li>Razón social.</li>
+<li>Horario de funcionamiento.</li>
+<li>Nombre del responsable sanitario y horario de asistencia.</li>
+<li>Aviso &ldquo;Se realizan actos no quirúrgicos&rdquo; o equivalente.</li>
+<li>[ ] Señalización de emergencia visible.</li>
+<li>[ ] Extintor PQS vigente.</li>
+<li>[ ] Botiquín de primeros auxilios.</li>
+<li>[ ] Directorio de emergencias (Cruz Roja, bomberos, hospital cercano, COFEPRIS).</li>
+</ul>
+<hr />
+<h3 id="paso-10-documentacion-clinica-operativa">PASO 10 · Documentación clínica operativa</h3>
+<ul>
+<li>[ ] <strong>Consentimiento informado</strong> firmado por el paciente para cada procedimiento (plantilla abajo).</li>
+<li>[ ] <strong>Historia clínica</strong> completa:</li>
+<li>Datos personales.</li>
+<li>Antecedentes médicos (alergias, enfermedades, cirugías).</li>
+<li>Medicamentos actuales.</li>
+<li>Fototipo Fitzpatrick.</li>
+<li>Antecedentes de exposición solar.</li>
+<li>Embarazo / lactancia.</li>
+<li>Expectativas del paciente.</li>
+<li>[ ] <strong>Registro diario de pacientes</strong> (bitácora).</li>
+<li>[ ] <strong>Notas de evolución</strong> post-procedimiento.</li>
+<li>[ ] <strong>Bitácora de mantenimiento del equipo</strong> (fechas, técnico, descripción).</li>
+<li>[ ] <strong>Carpeta de registro sanitario</strong> del equipo (a la vista).</li>
+</ul>
+<hr />
+<h2 id="4-plantilla-de-consentimiento-informado">4. Plantilla de consentimiento informado</h2>
+<pre><code>CONSENTIMIENTO INFORMADO PARA TRATAMIENTO LÁSER
+
+Yo, ______________________________, declaro que:
+
+1. He recibido información clara sobre el procedimiento:
+   Tratamiento: ___________________________________
+   Zona a tratar: __________________________________
+   Tecnología: ____________________________________
+   Número de sesiones estimado: ____________________
+   Costo total estimado: __________________________
+
+2. Entiendo que:
+   - Los resultados varían según mi tipo de piel, color del vello/lesión,
+     adherencia al tratamiento y respuesta individual.
+   - Puedo requerir más sesiones de las estimadas.
+   - Los efectos secundarios posibles incluyen: enrojecimiento, hinchazón,
+     cambios temporales de pigmentación, y en casos raros, cicatrices o
+     quemaduras.
+
+3. Confirmo que NO tengo ninguna contraindicación para el tratamiento:
+   - No estoy embarazada ni lactando.
+   - No tengo cáncer activo ni uso medicamentos fotosensibles.
+   - No tengo herpes activo en la zona a tratar.
+   - No me he aplicado isotretinoína (Accutane) en los últimos 6 meses.
+   - No tengo exposición solar reciente en la zona a tratar.
+
+4. Autorizo el uso de mis fotos clínicas con fines de seguimiento médico
+   y ACCESO A TRATAMIENTO (no publicitario).
+
+5. Acepto las recomendaciones post-tratamiento:
+   - Protección solar SPF 50 cada 4 horas durante 4 semanas.
+   - No exfoliar la zona por 7 días.
+   - No aplicar productos irritantes por 7 días.
+   - Reportar cualquier reacción unusual inmediatamente.
+
+Firma del paciente: ____________________ Fecha: ____ /____ /______
+
+Firma del médico/operador: _____________ Fecha: ____ /____ /______
+
+Firma del responsable sanitario: _______ Fecha: ____ /____ /______
+</code></pre>
+<hr />
+<h2 id="5-lo-que-no-debes-hacer-multas-y-clausuras">5. Lo que NO debes hacer (multas y clausuras)</h2>
+<ul>
+<li>❌ Operar sin Aviso de Funcionamiento.</li>
+<li>❌ Publicitar sin aviso publicitario.</li>
+<li>❌ Aplicar láser sin valoración médica previa.</li>
+<li>❌ Que personal sin capacitación opere el equipo.</li>
+<li>❌ Que personal no médico haga diagnósticos o recete.</li>
+<li>❌ Cobrar antes de dar valoración.</li>
+<li>❌ Prometer resultados absolutos (&ldquo;se va a borrar todo&rdquo;, &ldquo;100% efectivo&rdquo;).</li>
+<li>❌ Mostrar antes/después sin consentimiento escrito.</li>
+<li>❌ Usar equipo sin registro sanitario vigente.</li>
+<li>❌ Realizar procedimientos en zonas no autorizadas por COFEPRIS (quirófanos fuera de licencia si se requiere).</li>
+<li>❌ Negarte a mostrar documentación cuando un paciente o autoridad lo solicite.</li>
+</ul>
+<hr />
+<h2 id="6-directorio-de-contactos-oficiales">6. Directorio de contactos oficiales</h2>
+<table>
+<thead>
+<tr>
+<th>Dependencia</th>
+<th>Teléfono</th>
+<th>Web</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>COFEPRIS · Centro de Atención Telefónica</td>
+<td>800 033 5050</td>
+<td>gob.mx/cofepris</td>
+</tr>
+<tr>
+<td>DIGIPRiS (trámites en línea)</td>
+<td>—</td>
+<td>tramiteselectronicos02.cofepris.gob.mx</td>
+</tr>
+<tr>
+<td>PROFECO (aviso de privacidad)</td>
+<td>800 468 8722</td>
+<td>profeco.gob.mx</td>
+</tr>
+<tr>
+<td>SAT (RFC)</td>
+<td>800 463 6728</td>
+<td>sat.gob.mx</td>
+</tr>
+<tr>
+<td>IMSS</td>
+<td>800 623 2323</td>
+<td>imss.gob.mx</td>
+</tr>
+<tr>
+<td>Locatel CDMX (si aplica)</td>
+<td>5658 1111</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="7-calendario-de-cumplimiento">7. Calendario de cumplimiento</h2>
+<table>
+<thead>
+<tr>
+<th>Frecuencia</th>
+<th>Acción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Antes de abrir</strong></td>
+<td>Todos los pasos 1–10</td>
+</tr>
+<tr>
+<td><strong>Cada sesión</strong></td>
+<td>Consentimiento firmado + nota clínica</td>
+</tr>
+<tr>
+<td><strong>Cada cambio</strong></td>
+<td>Aviso de modificación COFEPRIS-05-056</td>
+</tr>
+<tr>
+<td><strong>Cada año</strong></td>
+<td>Renovación de aviso publicitario</td>
+</tr>
+<tr>
+<td><strong>Cada año</strong></td>
+<td>Calibración del equipo por servicio técnico</td>
+</tr>
+<tr>
+<td><strong>Cada año</strong></td>
+<td>Auditoría interna con Guía de Autoverificación COFEPRIS</td>
+</tr>
+<tr>
+<td><strong>Cada año</strong></td>
+<td>Revisión de la póliza de RC profesional</td>
+</tr>
+<tr>
+<td><strong>Cada 2 años</strong></td>
+<td>Capacitación de refresco al personal</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="8-errores-comunes-que-debes-evitar">8. Errores comunes que debes evitar</h2>
+<ol>
+<li><strong>&ldquo;Mi prima es enfermera, ella puede aplicar.&rdquo;</strong> No. Si no es médico con cédula, requiere capacitación demostrable + supervisión del responsable sanitario.</li>
+<li><strong>&ldquo;El proveedor del equipo me dijo que no necesitaba COFEPRIS.&rdquo;</strong> Miente. El equipo tiene su registro, pero el establecimiento necesita su Aviso de Funcionamiento.</li>
+<li><strong>&ldquo;En Instagram no es publicidad, son mis redes personales.&rdquo;</strong> Es publicidad. Necesitas aviso publicitario.</li>
+<li><strong>&ldquo;Voy a empezar a atender mientras tramito los permisos.&rdquo;</strong> Clausura inmediata + multa + posible suspensión de actividades por meses.</li>
+<li><strong>&ldquo;No tengo pacientes todavía, no necesito permisos.&rdquo;</strong> Para operar comercialmente, sí. Aunque sea tu primera clienta.</li>
+<li><strong>&ldquo;Mi socia es médica en otro estado, con eso basta.&rdquo;</strong> El responsable sanitario debe tener cédula y dar su nombre + horario en el local.</li>
+</ol>
+<hr />
+<h2 id="9-resumen-7-cosas-que-tener-antes-de-abrir-la-puerta">9. Resumen: 7 cosas que tener antes de abrir la puerta</h2>
+<ol>
+<li>✅ RFC de la persona moral (o física con actividad empresarial).</li>
+<li>✅ Aviso de Funcionamiento COFEPRIS-05-036 con responsable sanitario (folio).</li>
+<li>✅ Aviso publicitario COFEPRIS-05-058 (si hay web/redes).</li>
+<li>✅ Licencia de uso de suelo.</li>
+<li>✅ Equipo con registro sanitario + manual + calibración al día.</li>
+<li>✅ Personal con constancias de capacitación.</li>
+<li>✅ Póliza de RC profesional + Aviso de Privacidad público.</li>
+</ol>
+<blockquote>
+<p>Siete cosas. No más. Y se hacen en una semana si se contratan los servicios de un gestor COFEPRIS certificado (costo: $3,000–$8,000 MXN). Se pagan solos con la primera semana de operación.</p>
+</blockquote>
+<hr />
+<p><em>Documento preparado por ABDev. Si hay duda sobre cualquier paso, contratar un gestor COFEPRIS local o consultar directamente al 800 033 5050.</em></p>
+  </div>
+</article>
+
+<aside class="docs-toc">
+  <div class="docs-container">
+    <div class="docs-toc__sticky">
+      <div class="docs-toc__label">En esta página</div>
+      <div class="toc">
+<ul>
+<li><a href="#1-resumen-ejecutivo">1. Resumen ejecutivo</a></li>
+<li><a href="#2-antes-de-empezar">2. Antes de empezar</a></li>
+<li><a href="#3-paso-a-paso">3. Paso a paso</a><ul>
+<li><a href="#paso-1-rfc-y-alta-de-actividad-sat">PASO 1 · RFC y alta de actividad (SAT)</a></li>
+<li><a href="#paso-2-contrato-de-arrendamiento-escritura-del-local">PASO 2 · Contrato de arrendamiento / escritura del local</a></li>
+<li><a href="#paso-3-aviso-de-funcionamiento-cofepris-cofepris-05-036">PASO 3 · Aviso de Funcionamiento COFEPRIS (COFEPRIS-05-036)</a></li>
+<li><a href="#paso-4-aviso-publicitario-cofepris-05-058">PASO 4 · Aviso publicitario (COFEPRIS-05-058)</a></li>
+<li><a href="#paso-5-licencia-de-uso-de-suelo">PASO 5 · Licencia de uso de suelo</a></li>
+<li><a href="#paso-6-poliza-de-responsabilidad-civil-profesional">PASO 6 · Póliza de Responsabilidad Civil profesional</a></li>
+<li><a href="#paso-7-aviso-de-privacidad-lfpdppp">PASO 7 · Aviso de Privacidad (LFPDPPP)</a></li>
+<li><a href="#paso-8-alta-patronal-imss-si-hay-empleados">PASO 8 · Alta patronal IMSS (si hay empleados)</a></li>
+<li><a href="#paso-9-infraestructura-fisica-del-local">PASO 9 · Infraestructura física del local</a></li>
+<li><a href="#paso-10-documentacion-clinica-operativa">PASO 10 · Documentación clínica operativa</a></li>
+</ul>
+</li>
+<li><a href="#4-plantilla-de-consentimiento-informado">4. Plantilla de consentimiento informado</a></li>
+<li><a href="#5-lo-que-no-debes-hacer-multas-y-clausuras">5. Lo que NO debes hacer (multas y clausuras)</a></li>
+<li><a href="#6-directorio-de-contactos-oficiales">6. Directorio de contactos oficiales</a></li>
+<li><a href="#7-calendario-de-cumplimiento">7. Calendario de cumplimiento</a></li>
+<li><a href="#8-errores-comunes-que-debes-evitar">8. Errores comunes que debes evitar</a></li>
+<li><a href="#9-resumen-7-cosas-que-tener-antes-de-abrir-la-puerta">9. Resumen: 7 cosas que tener antes de abrir la puerta</a></li>
+</ul>
+</div>
+
+    </div>
+  </div>
+</aside>
+
+<footer class="docs-footer">
+  <div class="docs-container">
+    <p>LaserMed · Documentación interna · Generado automáticamente</p>
+    <p><a href="../index.html">← Volver a la landing</a> · <a href="index.html">Ver todos los documentos</a></p>
+  </div>
+</footer>
+
+</main>
+
+</body>
+</html>

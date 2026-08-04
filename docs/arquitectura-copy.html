@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Arquitectura copy-first · LaserMed · Documentación</title>
+  <meta name="description" content="Wireframe en texto, bloques, objetivo comercial" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23c9603d'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-family='serif' font-size='18' fill='%23f8f5ef' font-weight='500'%3EL%3C/text%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,300..900,0..100;1,9..144,300..900,0..100&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../docs-assets/docs.css" />
+</head>
+<body>
+
+<header class="docs-nav">
+  <div class="docs-nav__inner">
+    <a href="../index.html" class="docs-nav__logo">
+      <span class="docs-nav__mark">L</span>
+      <span>LaserMed</span>
+    </a>
+    <nav class="docs-nav__links">
+      <a href="../index.html">← Volver a la landing</a>
+      <a href="index.html">Documentación</a>
+      <a href="raw/arquitectura-copy.md">Descargar .md</a>
+    </nav>
+  </div>
+</header>
+
+<main class="docs-main">
+
+<header class="docs-header">
+  <div class="docs-container">
+    <div class="docs-header__eyebrow">Documentación del proyecto</div>
+    <h1 class="docs-header__title">Arquitectura copy-first</h1>
+    <p class="docs-header__tagline">Wireframe en texto, bloques, objetivo comercial</p>
+  </div>
+</header>
+
+<article class="docs-article">
+  <div class="docs-container">
+    <p><strong>Una página, una promesa, una acción.</strong>
+<strong>Acción única:</strong> <em>Agendar valoración gratuita</em> (con WhatsApp como canal principal de baja fricción).</p>
+<hr />
+<h2 id="wireframe-en-texto-orden-de-aparicion">Wireframe en texto (orden de aparición)</h2>
+<h3 id="0-nav-sticky-transparente-sobre-hero-blanco-al-hacer-scroll">0 · Nav (sticky, transparente sobre hero, blanco al hacer scroll)</h3>
+<ul>
+<li>Logo (izquierda)</li>
+<li>Menú: Servicios · Tecnología · El proceso · Quiénes somos · FAQ</li>
+<li>CTA: &ldquo;Agendar valoración&rdquo; (botón sólido, siempre visible)</li>
+<li>(Mobile) Hamburguesa</li>
+</ul>
+<h3 id="1-hero">1 · Hero</h3>
+<p><strong>Objetivo:</strong> captar en 3 segundos. Comunicar: boutique de láser médico en CDMX.</p>
+<table>
+<thead>
+<tr>
+<th>Elemento</th>
+<th>Contenido</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Eyebrow</td>
+<td>&ldquo;CDMX · Boutique de láser estético&rdquo;</td>
+</tr>
+<tr>
+<td>H1</td>
+<td>&ldquo;Piel cuidada con luz de verdad.&rdquo; (o variante)</td>
+</tr>
+<tr>
+<td>Sub</td>
+<td>&ldquo;Depilación definitiva, tatuajes fuera, manchas que se van. Con valoración médica, manos certificadas y tecnología que sí te explicamos.&rdquo;</td>
+</tr>
+<tr>
+<td>CTA 1 (primario)</td>
+<td>&ldquo;Agenda tu valoración gratuita&rdquo;</td>
+</tr>
+<tr>
+<td>CTA 2 (secundario)</td>
+<td>&ldquo;Hablar por WhatsApp&rdquo;</td>
+</tr>
+<tr>
+<td>Trust badges</td>
+<td>&ldquo;COFEPRIS · Valoración médica previa · Responsable sanitario&rdquo;</td>
+</tr>
+<tr>
+<td>Visual</td>
+<td>Hero video o imagen full-bleed (modelo real, luz natural, sin retoque)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Bloques del deseo (mapeo):</strong>
+- 1 Problema: &ldquo;Piel que pide más de lo que las cremas dan&rdquo;
+- 2 Dolor: &ldquo;Cada 3 semanas, otra vez&rdquo;
+- 3 Deseo: &ldquo;Llegar a la playa sin pensar&rdquo;
+- 4 Beneficio del beneficio: &ldquo;Verse en el espejo y reconocerse&rdquo;</p>
+<h3 id="2-la-pregunta-micro-bloque-transicion">2 · La pregunta (micro-bloque, transición)</h3>
+<p><strong>Objetivo:</strong> bajar del hero al servicio con un dolor puntual. Tono íntimo, pregunta directa.</p>
+<ul>
+<li><strong>H2:</strong> &ldquo;¿Ya te la hiciste y no te sirvió?&rdquo;</li>
+<li><strong>Una línea de escena:</strong> &ldquo;Vuelves a la cita cada 3 semanas. Te aplicaron, te cobraron, saliste en 8 minutos. Nadie te dijo qué máquina usaron. Y ahora no sabes si el láser no sirve o si te tocó un mal lugar.&rdquo;</li>
+<li>(Sin CTA, solo deja la pregunta abierta para que el visitante siga leyendo)</li>
+</ul>
+<h3 id="3-servicios-grid-32">3 · Servicios (grid 3×2)</h3>
+<p><strong>Objetivo:</strong> que cada visitante encuentre lo que busca en menos de 5 segundos.</p>
+<p>Cada servicio = card con:
+- Ícono (línea fina, monocromo)
+- Título (1 línea)
+- 2 líneas de &ldquo;qué es&rdquo; (en lenguaje claro, sin jerga)
+- Indicación de sesiones típicas
+- &ldquo;Ver más&rdquo; → ancla a sección detalle</p>
+<p><strong>Servicios:</strong>
+1. <strong>Depilación láser definitiva</strong> — 808 nm. 6–8 sesiones. Hombres y mujeres.
+2. <strong>Eliminación de tatuajes</strong> — Picosegundos. 4–8 sesiones. Multicolor.
+3. <strong>Borrado de micropigmentación</strong> — Cejas, labios, eyeliner tatuado.
+4. <strong>Manchas y melasma</strong> — Léntigos, melasma, manchas del sol.
+5. <strong>Rejuvenecimiento facial</strong> — Arrugas finas, textura, luminosidad.
+6. <strong>Cicatrices y poros</strong> — Acné, poros dilatados, marcas.</p>
+<p>CTA abajo: &ldquo;Ver proceso completo de valoración&rdquo; → ancla a bloque de proceso.</p>
+<h3 id="4-por-que-lasermed-3-diferenciadores-visuales">4 · Por qué LaserMed (3 diferenciadores visuales)</h3>
+<p><strong>Objetivo:</strong> responder &ldquo;¿por qué ustedes y no la depiladora de la esquina?&rdquo; sin sonar a venta agresiva.</p>
+<p><strong>Estructura:</strong> 3 columnas, ícono + título + 3 líneas de cuerpo.</p>
+<ol>
+<li>
+<p><strong>Valoración médica antes de tocarte.</strong>
+   Cualquier láser empieza con un médico que ve tu piel, tu historial, tu tipo de piel Fitzpatrick y te dice si eres candidato. Antes de pagar.</p>
+</li>
+<li>
+<p><strong>Manos certificadas, no manos anónimas.</strong>
+   Operadores capacitados en el equipo específico, con constancia, supervisados por responsable sanitario con cédula profesional.</p>
+</li>
+<li>
+<p><strong>Tecnología explicada en español.</strong>
+   Te decimos qué te estamos haciendo en cada pulso. No es misterio, es método. Y si no aplica para ti, te decimos que no.</p>
+</li>
+</ol>
+<h3 id="5-la-tecnologia-seccion-cientifica-tono-editorial">5 · La tecnología (sección científica, tono editorial)</h3>
+<p><strong>Objetivo:</strong> la pieza que demuestra seriedad. No es la más larga; es la que cierra la venta racional.</p>
+<p><strong>Estructura:</strong> 2 bloques alternados texto/imagen con scroll, estilo revista.</p>
+<p><strong>Bloque A: Diodo 808 nm — para vello</strong>
+- &ldquo;808 nanómetros. La longitud de onda que el folículo piloso absorbe como un imán.&rdquo;
+- Explicar en 4–5 líneas el principio de selectividad fototérmica, sin jerga.
+- Resultado: vello eliminado, epidermis respetada.
+- Indicación: depilación, zonas grandes y chicas, hombres y mujeres, Fitzpatrick I–VI.</p>
+<p><strong>Bloque B: Picosegundos — para pigmento y textura</strong>
+- &ldquo;Pulsos de una billonésima de segundo. Tan cortos que rompen el pigmento por onda de choque, no por calor.&rdquo;
+- 4–5 líneas: efecto fotoacústico, fragmentación en polvo de tinta, eliminación natural.
+- Cabezales 1064 (oscuros), 532 (cálidos), 1320 (Black Doll, rejuvenecimiento).
+- Indicación: tatuajes, manchas, melasma, rejuvenecimiento, poros, cicatrices.</p>
+<p><strong>Cierre de bloque:</strong>
+&ldquo;Las dos tecnologías en una sola mano de pieza. Por eso en LaserMed se hacen cosas que otros no pueden.&rdquo;</p>
+<h3 id="6-el-proceso-4-pasos-timeline-horizontal">6 · El proceso (4 pasos, timeline horizontal)</h3>
+<p><strong>Objetivo:</strong> bajar la ansiedad de &ldquo;no sé qué me van a hacer&rdquo;. Mostrar el método.</p>
+<p><strong>4 pasos:</strong></p>
+<ol>
+<li>
+<p><strong>Valoración (gratis, 20 min).</strong>
+   Vienes, te vemos, te preguntamos, vemos tu piel. Si no eres candidato, te decimos. Si sí, te explicamos el plan: zonas, número de sesiones, intervalo, costo total estimado.</p>
+</li>
+<li>
+<p><strong>Plan personalizado (escrito).</strong>
+   Te entregamos tu plan por escrito: qué te vamos a hacer, cuántas sesiones, con qué间隔, qué esperar. Sin sorpresas. Te lo enviamos por WhatsApp.</p>
+</li>
+<li>
+<p><strong>Las sesiones.</strong>
+   Sesión por sesión. En cabina refrigerada, con música, con quien te explique cada paso. Duración entre 15 y 45 min según la zona.</p>
+</li>
+<li>
+<p><strong>Seguimiento real.</strong>
+   A los 7 días postratamiento, un mensaje para ver cómo vas. A las 3 semanas, la siguiente cita. Al final del plan, valoramos resultados contigo.</p>
+</li>
+</ol>
+<h3 id="7-quienes-somos-23-personas">7 · Quiénes somos (2–3 personas)</h3>
+<p><strong>Objetivo:</strong> humanizar. Poner cara y credenciales.</p>
+<p><strong>Estructura:</strong> 2-3 cards con foto real, nombre, rol, credenciales.</p>
+<ul>
+<li><strong>Responsable sanitario</strong> — Médico/a, cédula, formación, por qué medicina estética.</li>
+<li><strong>Operadora principal</strong> — Quién aplica los tratamientos, su capacitación, su trato.</li>
+<li><strong>(Opcional) Fundador/a</strong> — Si la historia personal tiene valor (ej. &ldquo;llevaba años depilándome y por eso abrí esto&rdquo;).</li>
+</ul>
+<p><strong>Cierre:</strong> &ldquo;Somos un equipo pequeño. No tenemos 20 sucursales. Tenemos una, donde te atendemos nosotros.&rdquo;</p>
+<h3 id="8-el-espacio-galeria-68-fotos">8 · El espacio (galería, 6–8 fotos)</h3>
+<p><strong>Objetivo:</strong> mostrar que es un lugar bonito. Una boutique, no una clínica de hospital.</p>
+<ul>
+<li>Cabina principal (con la máquina, luz natural)</li>
+<li>Sala de espera</li>
+<li>Recepción</li>
+<li>Detalle de un producto / textura / detalle de diseño</li>
+<li>Foto del equipo trabajando (de espaldas, sin mostrar paciente)</li>
+<li>(Opcional) Exterior del local</li>
+</ul>
+<h3 id="9-resultados-galeria-de-antesdespues-con-consentimiento">9 · Resultados (galería de antes/después con consentimiento)</h3>
+<p><strong>Objetivo:</strong> prueba social visual. Mínimo 3 casos, máximo 6.</p>
+<p><strong>Estructura:</strong> Carrusel con flecha. Cada caso: nombre (o alias), servicio, número de sesiones, tiempo total, &ldquo;ver caso completo&rdquo; opcional.</p>
+<blockquote>
+<p>⚠️ <strong>Crítico:</strong> Solo casos con consentimiento firmado. Sin excepción.</p>
+</blockquote>
+<h3 id="10-precios-y-planes-transparente">10 · Precios y planes (transparente)</h3>
+<p><strong>Objetivo:</strong> responder &ldquo;¿cuánto cuesta?&rdquo; sin esconderse. El mercado castiga la opacidad.</p>
+<p><strong>Estructura:</strong> Tabla de precios o cards. <strong>&ldquo;Desde&rdquo;</strong> siempre. Si hay paquetes de plan, definir el descuento pero sin agresividad.</p>
+<p>Ejemplo:
+- Depilación · axilas · desde $X / sesión
+- Depilación · piernas completas · desde $X / sesión
+- Tatuaje · sesión · desde $X
+- Manchas · desde $X / sesión
+- Rejuvenecimiento · plan 3 sesiones · $X (ahorra 15%)</p>
+<p>Cierre: &ldquo;En la valoración te decimos el costo total de tu plan. Sin sorpresas.&rdquo;</p>
+<h3 id="11-faq-10-preguntas">11 · FAQ (10 preguntas)</h3>
+<p><strong>Objetivo:</strong> responder lo que la gente busca en Google antes de agendar.</p>
+<p>Preguntas:
+1. ¿Duele el láser?
+2. ¿Cuántas sesiones necesito?
+3. ¿Cuánto cuesta el tratamiento completo?
+4. ¿Funciona para piel morena?
+5. ¿Funciona para vello claro / blanco?
+6. ¿Tiene riesgos? ¿Puede mancharme?
+7. ¿Puedo hacer el tratamiento si estoy embarazada?
+8. ¿Necesito valoración médica?
+9. ¿Cuánto dura cada sesión?
+10. ¿Qué pasa si no veo resultados?</p>
+<p>Cada respuesta: 2–4 líneas. Tono directo. Sin rodeos.</p>
+<h3 id="12-agente-ai-bloque-destacado">12 · Agente AI (bloque destacado)</h3>
+<p><strong>Objetivo:</strong> introducir la voz AI como herramienta de baja fricción.</p>
+<p><strong>Estructura:</strong> Card con waveform animada o visual del agente, copy corto, botón &ldquo;Hablar con LaserMed ahora&rdquo; (abre modal/widget ElevenLabs).</p>
+<ul>
+<li>&ldquo;Habla con LaserMed. En cualquier momento.&rdquo;</li>
+<li>&ldquo;Te contesta una voz con IA. Sabe de láser, sabe de planes, te agenda la valoración o resuelve tus dudas. Si prefieres humano, te pasamos con el equipo.&rdquo;</li>
+</ul>
+<h3 id="13-cta-final-cierre-emocional">13 · CTA final (cierre emocional)</h3>
+<p><strong>Objetivo:</strong> recapitular el &ldquo;después&rdquo; y empujar al agendamiento.</p>
+<ul>
+<li><strong>H2:</strong> &ldquo;Empieza a sentir tu piel como tuya otra vez.&rdquo;</li>
+<li>Una línea de cierre.</li>
+<li>CTA grande: &ldquo;Agenda tu valoración gratuita&rdquo;</li>
+<li>Trust line: &ldquo;COFEPRIS · Valoración médica · WhatsApp directo&rdquo;</li>
+</ul>
+<h3 id="14-footer">14 · Footer</h3>
+<p><strong>Objetivo:</strong> regulación + contacto + legal + redes.</p>
+<p>Columnas:
+- Logo + tagline corto
+- Contacto: dirección, teléfono, WhatsApp, email
+- Horarios
+- Redes (Instagram, TikTok)
+- Links legales: Aviso de privacidad · Términos · Reglamento COFEPRIS
+- &ldquo;Atención de denuncias COFEPRIS: 800 033 5050&rdquo;
+- &ldquo;Médico responsable sanitario: [Nombre] · Cédula [N°]&rdquo;
+- © 2026 LaserMed</p>
+<hr />
+<h2 id="notas-de-maquetacion">Notas de maquetación</h2>
+<ul>
+<li><strong>Una sola página con anclas.</strong> El usuario no abandona la promesa inicial.</li>
+<li><strong>Mobile-first.</strong> 70% del tráfico será móvil (CDMX, 25–45 años, Instagram/TikTok).</li>
+<li><strong>Velocidad de carga &lt; 2.5 s.</strong> Imágenes WebP, lazy load, fuente variable.</li>
+<li><strong>Schema.org MedicalClinic</strong> + LocalBusiness para SEO local.</li>
+<li><strong>Open Graph</strong> para que se vea bien al compartir en WhatsApp/Instagram.</li>
+<li><strong>Accesibilidad:</strong> contraste AA, alt text en todas las imágenes, navegación por teclado.</li>
+</ul>
+  </div>
+</article>
+
+<aside class="docs-toc">
+  <div class="docs-container">
+    <div class="docs-toc__sticky">
+      <div class="docs-toc__label">En esta página</div>
+      <div class="toc">
+<ul>
+<li><a href="#wireframe-en-texto-orden-de-aparicion">Wireframe en texto (orden de aparición)</a><ul>
+<li><a href="#0-nav-sticky-transparente-sobre-hero-blanco-al-hacer-scroll">0 · Nav (sticky, transparente sobre hero, blanco al hacer scroll)</a></li>
+<li><a href="#1-hero">1 · Hero</a></li>
+<li><a href="#2-la-pregunta-micro-bloque-transicion">2 · La pregunta (micro-bloque, transición)</a></li>
+<li><a href="#3-servicios-grid-32">3 · Servicios (grid 3×2)</a></li>
+<li><a href="#4-por-que-lasermed-3-diferenciadores-visuales">4 · Por qué LaserMed (3 diferenciadores visuales)</a></li>
+<li><a href="#5-la-tecnologia-seccion-cientifica-tono-editorial">5 · La tecnología (sección científica, tono editorial)</a></li>
+<li><a href="#6-el-proceso-4-pasos-timeline-horizontal">6 · El proceso (4 pasos, timeline horizontal)</a></li>
+<li><a href="#7-quienes-somos-23-personas">7 · Quiénes somos (2–3 personas)</a></li>
+<li><a href="#8-el-espacio-galeria-68-fotos">8 · El espacio (galería, 6–8 fotos)</a></li>
+<li><a href="#9-resultados-galeria-de-antesdespues-con-consentimiento">9 · Resultados (galería de antes/después con consentimiento)</a></li>
+<li><a href="#10-precios-y-planes-transparente">10 · Precios y planes (transparente)</a></li>
+<li><a href="#11-faq-10-preguntas">11 · FAQ (10 preguntas)</a></li>
+<li><a href="#12-agente-ai-bloque-destacado">12 · Agente AI (bloque destacado)</a></li>
+<li><a href="#13-cta-final-cierre-emocional">13 · CTA final (cierre emocional)</a></li>
+<li><a href="#14-footer">14 · Footer</a></li>
+</ul>
+</li>
+<li><a href="#notas-de-maquetacion">Notas de maquetación</a></li>
+</ul>
+</div>
+
+    </div>
+  </div>
+</aside>
+
+<footer class="docs-footer">
+  <div class="docs-container">
+    <p>LaserMed · Documentación interna · Generado automáticamente</p>
+    <p><a href="../index.html">← Volver a la landing</a> · <a href="index.html">Ver todos los documentos</a></p>
+  </div>
+</footer>
+
+</main>
+
+</body>
+</html>

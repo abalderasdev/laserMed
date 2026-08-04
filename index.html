@@ -1,0 +1,1106 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#f5f1ea" />
+  <title>LaserMed · Piel cuidada con luz de verdad · CDMX</title>
+  <meta name="description" content="Boutique de láser estético en CDMX. Depilación definitiva, eliminación de tatuajes, manchas y rejuvenecimiento. Valoración médica previa, manos certificadas, tecnología explicada." />
+  <meta name="keywords" content="láser estético CDMX, depilación láser CDMX, eliminar tatuaje CDMX, manchas melasma, rejuvenecimiento facial láser, picosegundo, láser diodo 808" />
+  <meta name="author" content="LaserMed" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://lasermed.mx/" />
+  <meta property="og:title" content="LaserMed · Piel cuidada con luz de verdad" />
+  <meta property="og:description" content="Boutique de láser estético en CDMX. Depilación definitiva, eliminación de tatuajes, manchas, rejuvenecimiento. Con valoración médica y manos certificadas." />
+  <meta property="og:image" content="https://lasermed.mx/assets/img/hero-1.webp" />
+  <meta property="og:locale" content="es_MX" />
+  <meta property="og:site_name" content="LaserMed" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="LaserMed · Piel cuidada con luz de verdad" />
+  <meta name="twitter:description" content="Boutique de láser estético en CDMX. Depilación definitiva, eliminación de tatuajes, manchas y rejuvenecimiento." />
+  <meta name="twitter:image" content="https://lasermed.mx/assets/img/hero-1.webp" />
+
+  <!-- Schema.org MedicalClinic -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MedicalClinic",
+    "name": "LaserMed",
+    "description": "Boutique de láser estético en CDMX. Depilación definitiva, eliminación de tatuajes, manchas y rejuvenecimiento facial.",
+    "url": "https://lasermed.mx",
+    "telephone": "+52-55-XXXX-XXXX",
+    "priceRange": "$$$",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Ciudad de México",
+      "addressRegion": "CDMX",
+      "addressCountry": "MX"
+    },
+    "medicalSpecialty": ["Dermatology", "Aesthetic"],
+    "availableService": [
+      { "@type": "MedicalProcedure", "name": "Depilación láser definitiva" },
+      { "@type": "MedicalProcedure", "name": "Eliminación de tatuajes" },
+      { "@type": "MedicalProcedure", "name": "Borrado de micropigmentación" },
+      { "@type": "MedicalProcedure", "name": "Tratamiento de manchas y melasma" },
+      { "@type": "MedicalProcedure", "name": "Rejuvenecimiento facial" },
+      { "@type": "MedicalProcedure", "name": "Tratamiento de cicatrices y poros" }
+    ]
+  }
+  </script>
+
+  <!-- Favicon (inline SVG, copper dot) -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23c9603d'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-family='serif' font-size='18' fill='%23f8f5ef' font-weight='500'%3EL%3C/text%3E%3C/svg%3E" />
+
+  <!-- Preconnect fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/reset.css" />
+  <link rel="stylesheet" href="css/tokens.css" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/sections.css" />
+  <link rel="stylesheet" href="css/motion.css" />
+
+  <!-- Lenis (smooth scroll, opcional) -->
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js" defer></script>
+  <!-- GSAP + ScrollTrigger -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" defer></script>
+</head>
+<body>
+
+<!-- ============================================
+     NAV
+     ============================================ -->
+<header class="nav" id="nav" role="banner">
+  <div class="container nav__inner">
+    <a href="#top" class="nav__logo" aria-label="LaserMed, ir al inicio">
+      <span class="nav__logo-mark">L</span>
+      <span>LaserMed</span>
+    </a>
+    <nav class="nav__menu" role="navigation" aria-label="Menú principal">
+      <a href="#servicios" class="ul-grow">Servicios</a>
+      <a href="#tecnologia" class="ul-grow">Tecnología</a>
+      <a href="#proceso" class="ul-grow">El proceso</a>
+      <a href="#equipo" class="ul-grow">Quiénes somos</a>
+      <a href="#faq" class="ul-grow">FAQ</a>
+    </nav>
+    <a href="#contacto" class="btn btn--primary btn--sm nav__cta">Agendar valoración</a>
+    <button class="nav__burger" id="navBurger" aria-label="Abrir menú" aria-expanded="false">
+      <span></span>
+    </button>
+  </div>
+</header>
+
+<!-- Mobile menu -->
+<div class="nav-mobile" id="navMobile" aria-hidden="true">
+  <nav>
+    <ul class="nav-mobile__list">
+      <li><a href="#servicios">Servicios</a></li>
+      <li><a href="#tecnologia">Tecnología</a></li>
+      <li><a href="#proceso">El proceso</a></li>
+      <li><a href="#equipo">Quiénes somos</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+    <div class="nav-mobile__cta">
+      <a href="#contacto" class="btn btn--primary btn--block">Agendar valoración</a>
+      <a href="https://wa.me/5255XXXXXXX" class="btn btn--ghost btn--block" target="_blank" rel="noopener">
+        Hablar por WhatsApp
+      </a>
+    </div>
+  </nav>
+</div>
+
+<main id="top">
+
+<!-- ============================================
+     1 · HERO
+     ============================================ -->
+<section class="hero" id="hero">
+  <div class="hero__media" aria-hidden="true">
+    <video autoplay muted loop playsinline poster="assets/img/hero-1.webp">
+      <source src="assets/video/hero-loop.mp4" type="video/mp4" />
+    </video>
+  </div>
+
+  <div class="container hero__inner">
+    <div class="hero__content">
+      <div class="hero__eyebrow">CDMX · Boutique de láser estético · 2026</div>
+      <h1 class="hero__h1">
+        <span class="word-mask" data-delay="1"><span>Piel</span></span>
+        <span class="word-mask" data-delay="2"><span>cuidada</span></span><br />
+        <span class="word-mask" data-delay="3"><span>con</span></span>
+        <span class="word-mask" data-delay="4"><span class="h-italic">luz</span></span>
+        <span class="word-mask" data-delay="5"><span>de</span></span>
+        <span class="word-mask" data-delay="6"><span>verdad.</span></span>
+      </h1>
+      <p class="hero__sub reveal" data-delay="7">
+        Depilación definitiva, tatuajes que se van, manchas que se aclaran.
+        Con valoración médica, manos certificadas y tecnología que te explicamos en español.
+      </p>
+      <div class="hero__ctas reveal" data-delay="8">
+        <a href="#contacto" class="btn btn--primary btn--lg">Agenda tu valoración gratuita</a>
+        <a href="https://wa.me/5255XXXXXXX" class="btn btn--text" target="_blank" rel="noopener">Hablar por WhatsApp</a>
+      </div>
+      <div class="hero__trust reveal" data-delay="9">
+        <span class="hero__trust-item">Aviso COFEPRIS vigente</span>
+        <span class="hero__trust-item">Valoración médica previa</span>
+        <span class="hero__trust-item">Responsable sanitario con cédula</span>
+      </div>
+    </div>
+
+    <aside class="hero__side reveal" data-delay="6">
+      <div class="hero__quote">
+        "No es magia. Es la longitud de onda correcta, las manos correctas y el método correcto."
+        <span class="hero__quote-attr">— Filosofía LaserMed</span>
+      </div>
+    </aside>
+  </div>
+
+  <div class="hero__scroll" aria-hidden="true">
+    Scroll
+    <span class="hero__scroll-line"></span>
+  </div>
+</section>
+
+<!-- ============================================
+     2 · PREGUNTA
+     ============================================ -->
+<section class="pregunta" id="pregunta">
+  <div class="container">
+    <h2 class="pregunta__h2 reveal-fade">
+      ¿Ya te la hiciste<br />
+      y no te <span class="h-italic">sirvió</span>?
+    </h2>
+    <p class="pregunta__body reveal-fade" data-delay="1">
+      Vuelves cada 3 semanas. Te aplicaron, te cobraron, saliste en 8 minutos.
+      Nadie te dijo qué máquina usaron ni por qué tantas sesiones.
+      Y ahora no sabes si el láser no funciona o si simplemente te tocó un mal lugar.
+    </p>
+  </div>
+</section>
+
+<!-- ============================================
+     3 · SERVICIOS
+     ============================================ -->
+<section class="servicios section--alt" id="servicios">
+  <div class="container">
+    <div class="servicios__head">
+      <div>
+        <div class="eyebrow">Lo que hacemos</div>
+        <h2>Seis cosas, hechas<br />con <span class="h-italic">método</span>.</h2>
+      </div>
+      <p class="lead">
+        Cada servicio empieza con una valoración. Si no eres candidato, te lo decimos.
+        Si sí, te armamos un plan por escrito, con número de sesiones, intervalo, costo total estimado y qué esperar en cada paso.
+      </p>
+    </div>
+
+    <div class="servicios__grid">
+
+      <article class="card reveal" data-delay="1">
+        <div class="card__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <circle cx="12" cy="12" r="3" />
+            <path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M5 19l2-2M17 7l2-2" />
+          </svg>
+        </div>
+        <span class="card__eyebrow">808 nm · 6–8 sesiones</span>
+        <h3 class="card__title">Depilación láser definitiva</h3>
+        <span class="card__meta">Hombres y mujeres</span>
+        <p class="card__body">
+          La longitud de onda que el folículo piloso absorbe como un imán.
+          Piel suave de verdad, sin retoques cada 3 semanas.
+        </p>
+        <span class="card__cta">Saber más</span>
+      </article>
+
+      <article class="card reveal" data-delay="2">
+        <div class="card__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M3 3l18 18M3 21h18M9 9c0-3 6-3 6 0s-6 3-6 6 6 3 6 0M15 15c0 3 6 3 6 0" />
+          </svg>
+        </div>
+        <span class="card__eyebrow">Picosegundos · 4–8 sesiones</span>
+        <h3 class="card__title">Eliminación de tatuajes</h3>
+        <span class="card__meta">Multicolor</span>
+        <p class="card__body">
+          Pulsos de una billonésima de segundo que rompen el pigmento por onda de choque.
+          Sin calor, sin cicatriz, en los colores que otros láseres no pueden.
+        </p>
+        <span class="card__cta">Saber más</span>
+      </article>
+
+      <article class="card reveal" data-delay="3">
+        <div class="card__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M3 12c2-3 5-3 7 0s5 3 7 0 4-3 4 0" />
+            <circle cx="12" cy="12" r="9" />
+          </svg>
+        </div>
+        <span class="card__eyebrow">Picosegundos · 3–6 sesiones</span>
+        <h3 class="card__title">Borrado de micropigmentación</h3>
+        <span class="card__meta">Cejas · Labios · Eyeliner</span>
+        <p class="card__body">
+          Cejas, labios, eyeliner tatuado. Empieza de nuevo sin llevar la marca de lo que se fue.
+        </p>
+        <span class="card__cta">Saber más</span>
+      </article>
+
+      <article class="card reveal" data-delay="4">
+        <div class="card__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <circle cx="12" cy="12" r="9" />
+            <circle cx="8" cy="10" r="1" fill="currentColor" />
+            <circle cx="15" cy="14" r="1.5" fill="currentColor" />
+            <circle cx="10" cy="16" r="0.5" fill="currentColor" />
+          </svg>
+        </div>
+        <span class="card__eyebrow">Picosegundos · 2–4 sesiones</span>
+        <h3 class="card__title">Manchas y melasma</h3>
+        <span class="card__meta">Solares · Melasma · Pecas</span>
+        <p class="card__body">
+          Manchas del sol, léntigos, melasma con protocolo. Aclara, no promete milagros.
+        </p>
+        <span class="card__cta">Saber más</span>
+      </article>
+
+      <article class="card reveal" data-delay="5">
+        <div class="card__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M12 3l1.5 4.5L18 9l-4.5 1.5L12 15l-1.5-4.5L6 9l4.5-1.5L12 3z" />
+          </svg>
+        </div>
+        <span class="card__eyebrow">Picosegundos fraccional · 3–4 sesiones</span>
+        <h3 class="card__title">Rejuvenecimiento facial</h3>
+        <span class="card__meta">Textura · Luminosidad · Poros</span>
+        <p class="card__body">
+          Arrugas finas, piel apagada, luminosidad que se va. El láser le recuerda a tu piel cómo fabricar colágeno.
+        </p>
+        <span class="card__cta">Saber más</span>
+      </article>
+
+      <article class="card reveal" data-delay="6">
+        <div class="card__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M4 20l4-8 4 4 8-12" />
+            <circle cx="8" cy="12" r="1" fill="currentColor" />
+            <circle cx="12" cy="16" r="1" fill="currentColor" />
+          </svg>
+        </div>
+        <span class="card__eyebrow">Picosegundos + 1320 nm · 3–6 sesiones</span>
+        <h3 class="card__title">Cicatrices y poros</h3>
+        <span class="card__meta">Acné · Poros · Marcas</span>
+        <p class="card__body">
+          La marca del acné, los poros que ya se notan. No se borra del todo,
+          pero se difumina hasta dejar de ser lo primero que se ve.
+        </p>
+        <span class="card__cta">Saber más</span>
+      </article>
+
+    </div>
+
+    <div class="servicios__cta reveal">
+      <a href="#proceso" class="btn btn--ghost btn--lg">Ver el proceso completo de valoración</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     4 · POR QUÉ LASERMED
+     ============================================ -->
+<section class="porque" id="porque">
+  <div class="container">
+    <div class="porque__head">
+      <div class="eyebrow">Lo que nos hace diferentes</div>
+      <h2>Tres cosas que no cambian<br />en una industria que cambia <span class="h-italic">por moda</span>.</h2>
+    </div>
+
+    <div class="porque__grid">
+      <article class="porque__item reveal" data-delay="1">
+        <span class="porque__num">I</span>
+        <h3>Valoración médica antes de tocarte.</h3>
+        <p>
+          Cualquier láser en LaserMed empieza con un médico que ve tu piel,
+          tu historial, tu tipo Fitzpatrick y te dice si eres candidato.
+          Antes de pagar. Si no aplica, te decimos.
+        </p>
+      </article>
+      <article class="porque__item reveal" data-delay="2">
+        <span class="porque__num">II</span>
+        <h3>Manos certificadas, no manos anónimas.</h3>
+        <p>
+          Operadores capacitados en este equipo específico, con constancia,
+          supervisados por un responsable sanitario con cédula profesional.
+          No es una franquicia; es un equipo pequeño que se sabe tu nombre.
+        </p>
+      </article>
+      <article class="porque__item reveal" data-delay="3">
+        <span class="porque__num">III</span>
+        <h3>Tecnología explicada en español.</h3>
+        <p>
+          Te decimos qué te estamos haciendo en cada pulso. No es misterio, es método.
+          Si no aplica para ti, te decimos. Y si no te gusta el plan, no avanzamos.
+        </p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     5 · TECNOLOGÍA
+     ============================================ -->
+<section class="tech section--dark" id="tecnologia">
+  <div class="container">
+    <div class="tech__head">
+      <div class="eyebrow">La tecnología</div>
+      <h2>Dos longitudes de onda.<br />Una sola mano de <span class="h-italic">obra</span>.</h2>
+      <p class="lead" style="color: var(--lm-ink-inv-2);">
+        Lo que vuelve a LaserMed un lugar donde se hacen cosas que otros no pueden.
+      </p>
+    </div>
+
+    <div class="tech__blocks">
+
+      <!-- Bloque A: 808 nm -->
+      <div class="tech__block">
+        <div class="tech__media clip-reveal">
+          <img src="assets/img/tecnologia-bloque-a.webp" alt="Piel iluminada con luz cálida, detalle de retrato" loading="lazy" />
+        </div>
+        <div>
+          <span class="tech__num">01 · DIODO 808 NM</span>
+          <h3 class="tech__title">La longitud de onda que el vello no puede esquivar.</h3>
+          <p class="tech__body">
+            808 nanómetros. Es el estándar de oro de la depilación láser desde 1998.
+            ¿Por qué? Porque es la longitud de onda que la melanina del folículo piloso absorbe como un imán.
+            La luz entra, el vello la convierte en calor, y destruye la célula madre del folículo.
+            La epidermis, mientras tanto, queda intacta.
+          </p>
+          <p class="tech__body">
+            Funciona en todo tipo de piel — desde la más clara hasta la más morena — con ajuste de parámetros.
+            Cada sesión destruye entre el 15 % y el 30 % de los folículos activos de la zona.
+            A la sexta sesión, la mayoría de las personas ve una reducción del 80 % o más.
+          </p>
+          <p class="tech__body">
+            Y una cosa que pocos te dicen: el vello blanco, canoso o pelirrojo muy claro no responde.
+            No tiene melanina. Si ese es tu caso, te lo decimos en la valoración.
+          </p>
+          <ul class="tech__list">
+            <li>Cara</li><li>Axilas</li><li>Brazos</li><li>Piernas</li><li>Bikini</li><li>Espalda</li><li>Pecho</li>
+          </ul>
+          <span class="tech__specs">808 nm · 1–10 Hz · 12×16 mm · 0–5 °C cabezal refrigerado · Fitzpatrick I–VI</span>
+        </div>
+      </div>
+
+      <!-- Bloque B: Picosegundos -->
+      <div class="tech__block tech__block--reverse">
+        <div class="tech__media clip-reveal">
+          <img src="assets/img/tecnologia-bloque-b.webp" alt="Detalle editorial de aplicación de láser facial" loading="lazy" />
+        </div>
+        <div>
+          <span class="tech__num">02 · PICOSEGUNDOS</span>
+          <h3 class="tech__title">Pulsos de una billonésima de segundo. Rompen el pigmento. No lo queman.</h3>
+          <p class="tech__body">
+            Los láseres viejos (Q-Switched) trabajan en nanosegundos.
+            Nuestro láser lo hace en <strong>picosegundos</strong>: mil veces más corto.
+            Tan rápido que la energía no se convierte en calor sino en una onda de choque.
+            Esa onda fragmenta el pigmento en partículas tan pequeñas que tu cuerpo las elimina por sí solo.
+          </p>
+          <p class="tech__body">
+            ¿El resultado? Menos sesiones. Menos riesgo de quemarte.
+            Menos hiperpigmentación. Y la capacidad de borrar colores que otros láseres no tocan: azul, verde, rojo.
+          </p>
+
+          <div class="tech__cabezales">
+            <div class="tech__cabezal">
+              <span class="tech__cabezal-wl">1064 nm</span>
+              <span class="tech__cabezal-desc">Tatuajes oscuros, negro, azul, cian, líneas de ojos y labios.</span>
+            </div>
+            <div class="tech__cabezal">
+              <span class="tech__cabezal-wl">532 nm</span>
+              <span class="tech__cabezal-desc">Tatuajes rojos y cálidos, cejas, marcas rojas, manchas superficiales.</span>
+            </div>
+            <div class="tech__cabezal">
+              <span class="tech__cabezal-wl">755 nm</span>
+              <span class="tech__cabezal-desc">Manchas solares, lentigos, cloasma, pecas.</span>
+            </div>
+            <div class="tech__cabezal">
+              <span class="tech__cabezal-wl">1320 nm</span>
+              <span class="tech__cabezal-desc">Black Doll. Rejuvenecimiento, poros, luminosidad, limpieza profunda.</span>
+            </div>
+          </div>
+
+          <p class="tech__body" style="margin-top: var(--sp-6);">
+            Es la tecnología detrás de la palabra "pico" en todos los consultorios dermatológicos serios del mundo.
+            Pocas clínicas en México la ofrecen.
+          </p>
+
+          <ul class="tech__list">
+            <li>Tatuajes multicolor</li><li>Manchas</li><li>Melasma</li><li>Cicatrices de acné</li><li>Rejuvenecimiento</li><li>Poros</li><li>Micropigmentación</li>
+          </ul>
+          <span class="tech__specs">500–800 ps · 1064 / 532 / 755 / 1320 nm · 1–10 Hz · 1500 mJ máximo</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     6 · PROCESO
+     ============================================ -->
+<section class="proceso" id="proceso">
+  <div class="container">
+    <div class="proceso__head">
+      <div class="eyebrow">El método</div>
+      <h2>Cuatro pasos. <span class="h-italic">Sin sorpresas.</span></h2>
+      <p class="lead">
+        No es magia, no es "te aplicamos y ya". Es un método que existe para que sepas exactamente qué pasa, cuándo y por qué.
+      </p>
+    </div>
+
+    <div class="proceso__steps">
+      <article class="proceso__step reveal" data-delay="1">
+        <span class="proceso__step-num">I</span>
+        <span class="proceso__step-time">20 min · Gratis</span>
+        <h3>Valoración</h3>
+        <p>
+          Vienes, te vemos, te preguntamos, vemos tu piel bajo luz directa.
+          Si no eres candidato, te decimos y no avanzamos.
+          Si sí, te explicamos el plan: zonas, sesiones, intervalo, costo total.
+        </p>
+      </article>
+      <article class="proceso__step reveal" data-delay="2">
+        <span class="proceso__step-num">II</span>
+        <span class="proceso__step-time">24–48 h después</span>
+        <h3>Plan personalizado</h3>
+        <p>
+          Te enviamos por WhatsApp tu plan por escrito.
+          Lo revisas en casa, lo platicas con quien quieras,
+          y si te late, agendamos la primera sesión.
+        </p>
+      </article>
+      <article class="proceso__step reveal" data-delay="3">
+        <span class="proceso__step-num">III</span>
+        <span class="proceso__step-time">15–45 min · cada 4–8 semanas</span>
+        <h3>Las sesiones</h3>
+        <p>
+          Sesión por sesión, en cabina refrigerada, con música,
+          con quien te explica cada paso. Protección ocular obligatoria,
+          crema anestésica si la necesitas, frío en la zona.
+        </p>
+      </article>
+      <article class="proceso__step reveal" data-delay="4">
+        <span class="proceso__step-num">IV</span>
+        <span class="proceso__step-time">A los 7 días, y siempre</span>
+        <h3>Seguimiento real</h3>
+        <p>
+          Al séptimo día te escribimos para ver cómo va.
+          Si algo se siente raro, te vemos sin costo.
+          Cuando terminas el plan, valoramos resultados juntos.
+        </p>
+      </article>
+    </div>
+
+    <div class="proceso__cta reveal">
+      <a href="#contacto" class="btn btn--primary btn--lg">Empezar por la valoración</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     7 · QUIÉNES SOMOS
+     ============================================ -->
+<section class="quienes" id="equipo">
+  <div class="container">
+    <div class="quienes__head">
+      <div class="eyebrow">El equipo</div>
+      <h2>Un equipo pequeño<br />que se sabe <span class="h-italic">tu nombre</span>.</h2>
+      <p class="lead">
+        No tenemos 20 sucursales. Tenemos una, donde te atendemos nosotros.
+      </p>
+    </div>
+
+    <div class="quienes__grid">
+      <article class="quienes__card reveal" data-delay="1">
+        <div class="quienes__avatar">
+          <img src="assets/img/equipo-medico.webp" alt="Dra. responsable sanitario" loading="lazy" />
+        </div>
+        <div class="quienes__role">Responsable sanitaria</div>
+        <h3 class="quienes__name">[Nombre de la médica]</h3>
+        <p class="quienes__quote">
+          "No me gusta recetar lo que no haría en mi propia piel."
+        </p>
+      </article>
+      <article class="quienes__card reveal" data-delay="2">
+        <div class="quienes__avatar">
+          <img src="assets/img/equipo-operadora.webp" alt="Operadora láser" loading="lazy" />
+        </div>
+        <div class="quienes__role">Operadora láser</div>
+        <h3 class="quienes__name">[Nombre de operadora]</h3>
+        <p class="quienes__quote">
+          "Cada piel es un caso nuevo. Por eso te escucho antes de tocarte."
+        </p>
+      </article>
+      <article class="quienes__card reveal" data-delay="3">
+        <div class="quienes__avatar">
+          <img src="assets/img/proceso-valoracion.webp" alt="Fundadora de LaserMed" loading="lazy" />
+        </div>
+        <div class="quienes__role">Fundadora</div>
+        <h3 class="quienes__name">[Nombre de fundadora]</h3>
+        <p class="quienes__quote">
+          "Llevo años depilándome. Abrí esto para hacerlo bien."
+        </p>
+      </article>
+    </div>
+
+    <p class="quienes__coda reveal">
+      "No es una franquicia. Es un equipo pequeño que se sabe tu nombre."
+    </p>
+  </div>
+</section>
+
+<!-- ============================================
+     8 · ESPACIO
+     ============================================ -->
+<section class="espacio section--dark" id="espacio">
+  <div class="container">
+    <div class="espacio__head">
+      <div class="eyebrow">El lugar</div>
+      <h2>Una <span class="h-italic">boutique</span>,<br />no una clínica.</h2>
+      <p class="lead" style="color: var(--lm-ink-inv-2);">
+        Luz natural, una cabina, una sala de espera, una máquina.
+        El espacio está pensado para que vengas, te relajes y te vayas sintiéndote bien.
+      </p>
+    </div>
+
+    <div class="espacio__grid">
+      <div class="espacio__item">
+        <img src="assets/img/espacio-cabina.webp" alt="Cabina principal de tratamiento" loading="lazy" />
+      </div>
+      <div class="espacio__item">
+        <img src="assets/img/espacio-sala-espera.webp" alt="Sala de espera" loading="lazy" />
+      </div>
+      <div class="espacio__item">
+        <img src="assets/img/espacio-detalle-equipo.webp" alt="Detalle de la pieza de mano del equipo láser" loading="lazy" />
+      </div>
+      <div class="espacio__item">
+        <img src="assets/img/espacio-decoracion.webp" alt="Detalle de decoración del espacio" loading="lazy" />
+      </div>
+      <div class="espacio__item">
+        <img src="assets/img/hero-2.webp" alt="Detalle del espacio y la luz" loading="lazy" />
+      </div>
+      <div class="espacio__item">
+        <img src="assets/img/tecnologia-abstract.webp" alt="Detalle de la piel" loading="lazy" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     9 · RESULTADOS
+     ============================================ -->
+<section class="resultados" id="resultados">
+  <div class="container">
+    <div class="resultados__head">
+      <div class="eyebrow">Resultados reales</div>
+      <h2>Lo que pasó<br />en las pieles que han <span class="h-italic">pasado por aquí</span>.</h2>
+    </div>
+    <p class="resultados__nota">
+      Estos casos son de pacientes que dieron su consentimiento por escrito para el uso de sus imágenes.
+      Los nombres son alias. Los tiempos son reales. Cada piel responde distinto
+      y no garantizamos el mismo resultado en todos los casos.
+    </p>
+
+    <div class="resultados__empty reveal">
+      <strong>Próximamente</strong>
+      Subiremos aquí los casos con consentimiento firmado.
+      Si quieres ver resultados antes de agendar, te los mostramos en la valoración — con foto del paciente presente, no en una web.
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     10 · PRECIOS
+     ============================================ -->
+<section class="precios section--alt" id="precios">
+  <div class="container">
+    <div class="precios__head">
+      <div class="eyebrow">Precios</div>
+      <h2>Transparentes <span class="h-italic">desde el inicio</span>.</h2>
+      <p class="lead">
+        El costo total de tu plan te lo decimos en la valoración. Sin sorpresas, sin "preguntas para saber cuánto".
+      </p>
+    </div>
+
+    <div class="precios__tabla">
+
+      <!-- Depilación -->
+      <div class="precios__grupo reveal">
+        <h3>Depilación láser</h3>
+        <div class="precios__grupo-sub">Diodo 808 nm · 6–8 sesiones</div>
+
+        <div class="precios__row">
+          <span class="precios__row-zona">Axilas</span>
+          <span class="precios__row-sesiones">6–8</span>
+          <span class="precios__row-precio">desde $X</span>
+        </div>
+        <div class="precios__row">
+          <span class="precios__row-zona">Bikini brasileño</span>
+          <span class="precios__row-sesiones">6–8</span>
+          <span class="precios__row-precio">desde $X</span>
+        </div>
+        <div class="precios__row">
+          <span class="precios__row-zona">Piernas completas</span>
+          <span class="precios__row-sesiones">6–8</span>
+          <span class="precios__row-precio">desde $X</span>
+        </div>
+        <div class="precios__row">
+          <span class="precios__row-zona">Media pierna</span>
+          <span class="precios__row-sesiones">6–8</span>
+          <span class="precios__row-precio">desde $X</span>
+        </div>
+        <div class="precios__row">
+          <span class="precios__row-zona">Espalda (hombre)</span>
+          <span class="precios__row-sesiones">6–8</span>
+          <span class="precios__row-precio">desde $X</span>
+        </div>
+        <div class="precios__row">
+          <span class="precios__row-zona">Pecho (hombre)</span>
+          <span class="precios__row-sesiones">6–8</span>
+          <span class="precios__row-precio">desde $X</span>
+        </div>
+        <div class="precios__row">
+          <span class="precios__row-zona">Cara / bozo / mentón</span>
+          <span class="precios__row-sesiones">6–8</span>
+          <span class="precios__row-precio">desde $X</span>
+        </div>
+        <div class="precios__row">
+          <span class="precios__row-zona">Brazo completo</span>
+          <span class="precios__row-sesiones">6–8</span>
+          <span class="precios__row-precio">desde $X</span>
+        </div>
+
+        <div class="precios__planes">
+          <strong>Plan 6 sesiones:</strong> 15% de descuento sobre el total.<br />
+          <strong>Plan 8 sesiones</strong> (recomendado): 20% de descuento.
+        </div>
+      </div>
+
+      <!-- Tatuajes + manchas + rejuvenecimiento -->
+      <div class="precios__grupo reveal" data-delay="1">
+        <h3>Tatuajes</h3>
+        <div class="precios__grupo-sub">Picosegundos · 4–8 sesiones</div>
+
+        <div class="precios__row">
+          <span class="precios__row-zona">Tatuaje pequeño (≤ 5 cm)</span>
+          <span class="precios__row-sesiones">3–5</span>
+          <span class="precios__row-precio">desde $X</span>
+        </div>
+        <div class="precios__row">
+          <span class="precios__row-zona">Tatuaje mediano (5–15 cm)</span>
+          <span class="precios__row-sesiones">5–8</span>
+          <span class="precios__row-precio">desde $X</span>
+        </div>
+        <div class="precios__row">
+          <span class="precios__row-zona">Tatuaje grande (> 15 cm)</span>
+          <span class="precios__row-sesiones">6–10</span>
+          <span class="precios__row-precio">desde $X</span>
+        </div>
+
+        <h3 style="margin-top: var(--sp-12);">Manchas y rejuvenecimiento</h3>
+        <div class="precios__grupo-sub">Picosegundos · 2–6 sesiones</div>
+
+        <div class="precios__row">
+          <span class="precios__row-zona">Manchas puntuales</span>
+          <span class="precios__row-sesiones">2–4</span>
+          <span class="precios__row-precio">desde $X</span>
+        </div>
+        <div class="precios__row">
+          <span class="precios__row-zona">Melasma (protocolo)</span>
+          <span class="precios__row-sesiones">4–6</span>
+          <span class="precios__row-precio">desde $X</span>
+        </div>
+        <div class="precios__row">
+          <span class="precios__row-zona">Rejuvenecimiento facial</span>
+          <span class="precios__row-sesiones">3</span>
+          <span class="precios__row-precio">desde $X</span>
+        </div>
+        <div class="precios__row">
+          <span class="precios__row-zona">Cicatrices de acné</span>
+          <span class="precios__row-sesiones">4–6</span>
+          <span class="precios__row-precio">desde $X</span>
+        </div>
+        <div class="precios__row">
+          <span class="precios__row-zona">Micropigmentación</span>
+          <span class="precios__row-sesiones">3–6</span>
+          <span class="precios__row-precio">desde $X</span>
+        </div>
+
+        <div class="precios__planes">
+          <strong>Plan 3 sesiones</strong> de rejuvenecimiento: 12% de descuento.
+        </div>
+      </div>
+
+    </div>
+
+    <div class="precios__cta reveal">
+      <p>
+        "Si no te encaja el plan, te lo decimos. No vendemos lo que no aplica."
+      </p>
+      <a href="#contacto" class="btn btn--primary btn--lg">Pedir mi valoración gratuita</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     11 · FAQ
+     ============================================ -->
+<section class="faq" id="faq">
+  <div class="container">
+    <div class="faq__head">
+      <div class="eyebrow">Preguntas reales</div>
+      <h2>Lo que más<br />nos <span class="h-italic">preguntan</span>.</h2>
+    </div>
+
+    <div class="faq__list">
+
+      <details class="faq__item">
+        <summary class="faq__q">¿Duele el láser?</summary>
+        <div class="faq__a"><div class="faq__a-inner">
+          El diodo 808 nm se siente como un golpe de calor tolerable, gracias al cabezal refrigerado.
+          El picosegundo se siente como un chasquido de liga elástica. Si lo necesitas, aplicamos crema anestésica 20 minutos antes.
+          La mayoría de las personas termina la sesión sin problema.
+        </div></div>
+      </details>
+
+      <details class="faq__item">
+        <summary class="faq__q">¿Cuántas sesiones necesito?</summary>
+        <div class="faq__a"><div class="faq__a-inner">
+          Depilación: 6 a 8. Tatuajes: 4 a 8 (depende de color, tamaño, profundidad y capas).
+          Manchas: 2 a 4. Rejuvenecimiento: 3 a 4. Te lo decimos exacto en la valoración gratuita.
+        </div></div>
+      </details>
+
+      <details class="faq__item">
+        <summary class="faq__q">¿Cuánto cuesta el tratamiento completo?</summary>
+        <div class="faq__a"><div class="faq__a-inner">
+          Depende de la zona y del plan. La valoración es gratuita y al salir te llevas un estimado por escrito.
+          En promedio, una depilación de axilas en plan de 6 sesiones cuesta entre $X y $X.
+          Te lo confirmamos contigo, no te dejamos con la duda.
+        </div></div>
+      </details>
+
+      <details class="faq__item">
+        <summary class="faq__q">¿Funciona para piel morena?</summary>
+        <div class="faq__a"><div class="faq__a-inner">
+          Sí. El diodo 808 nm es seguro en Fitzpatrick I a VI con ajuste de parámetros.
+          El picosegundo requiere más cuidado en tonos V+, pero trabajamos con parámetros conservadores
+          y te decimos si eres candidato antes de cualquier cosa.
+        </div></div>
+      </details>
+
+      <details class="faq__item">
+        <summary class="faq__q">¿Funciona para vello claro, blanco o pelirrojo?</summary>
+        <div class="faq__a"><div class="faq__a-inner">
+          No. La depilación láser necesita melanina en el folículo.
+          Si tu vello es blanco, canoso o pelirrojo muy claro, no es el tratamiento para ti.
+          Te decimos en la valoración y te recomendamos opciones.
+        </div></div>
+      </details>
+
+      <details class="faq__item">
+        <summary class="faq__q">¿Tiene riesgos? ¿Puede mancharme la piel?</summary>
+        <div class="faq__a"><div class="faq__a-inner">
+          Todo procedimiento médico tiene riesgos. Los más comunes con láser son enrojecimiento e hinchazón transitoria (24–48 h)
+          y, en pieles oscuras, riesgo de hiperpigmentación.
+          En LaserMed minimizamos esto con valoración previa, prueba en zona pequeña la primera sesión y ajuste de parámetros.
+          Si notas algo raro, te vemos sin costo.
+        </div></div>
+      </details>
+
+      <details class="faq__item">
+        <summary class="faq__q">¿Puedo hacer el tratamiento si estoy embarazada o lactando?</summary>
+        <div class="faq__a"><div class="faq__a-inner">
+          No. Embarazo y lactancia son contraindicación absoluta para cualquier láser estético.
+          Volvemos a vernos cuando termines ese proceso.
+        </div></div>
+      </details>
+
+      <details class="faq__item">
+        <summary class="faq__q">¿Necesito valoración médica?</summary>
+        <div class="faq__a"><div class="faq__a-inner">
+          Sí. Todo tratamiento en LaserMed requiere valoración médica previa por nuestro responsable sanitario.
+          Es parte del método, no un costo extra.
+        </div></div>
+      </details>
+
+      <details class="faq__item">
+        <summary class="faq__q">¿Cuánto dura cada sesión?</summary>
+        <div class="faq__a"><div class="faq__a-inner">
+          Entre 15 minutos (axilas, cejas, zonas pequeñas) y 45 minutos (piernas completas, espalda, tatuajes grandes).
+          Te lo confirmamos al agendar.
+        </div></div>
+      </details>
+
+      <details class="faq__item">
+        <summary class="faq__q">¿Qué pasa si no veo resultados?</summary>
+        <div class="faq__a"><div class="faq__a-inner">
+          Si después del plan completo no ves el cambio esperado, te valoramos sin costo y vemos qué pasó.
+          Si el equipo no respondió como esperábamos, te proponemos opciones: ajustar parámetros,
+          sesiones adicionales a precio preferencial, o redirigirte a un especialista.
+          No te dejamos sola con la frustración.
+        </div></div>
+      </details>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     12 · AGENTE AI
+     ============================================ -->
+<section class="agente section--dark" id="agente">
+  <div class="container">
+    <div class="agente__inner">
+      <div class="agente__visual">
+        <svg class="agente__wave" viewBox="0 0 400 200" preserveAspectRatio="none" aria-hidden="true">
+          <defs>
+            <linearGradient id="agente-grad" x1="0" x2="1" y1="0" y2="0">
+              <stop offset="0%" stop-color="#c9603d" stop-opacity="0" />
+              <stop offset="30%" stop-color="#c9603d" stop-opacity="0.8" />
+              <stop offset="70%" stop-color="#e8b89e" stop-opacity="0.8" />
+              <stop offset="100%" stop-color="#e8b89e" stop-opacity="0" />
+            </linearGradient>
+          </defs>
+          <g fill="none" stroke="url(#agente-grad)" stroke-width="1.5" stroke-linecap="round">
+            <!-- Animated waveform bars -->
+            <line class="ag-bar" x1="20" y1="100" x2="20" y2="100" />
+            <line class="ag-bar" x1="40" y1="100" x2="40" y2="100" />
+            <line class="ag-bar" x1="60" y1="100" x2="60" y2="100" />
+            <line class="ag-bar" x1="80" y1="100" x2="80" y2="100" />
+            <line class="ag-bar" x1="100" y1="100" x2="100" y2="100" />
+            <line class="ag-bar" x1="120" y1="100" x2="120" y2="100" />
+            <line class="ag-bar" x1="140" y1="100" x2="140" y2="100" />
+            <line class="ag-bar" x1="160" y1="100" x2="160" y2="100" />
+            <line class="ag-bar" x1="180" y1="100" x2="180" y2="100" />
+            <line class="ag-bar" x1="200" y1="100" x2="200" y2="100" />
+            <line class="ag-bar" x1="220" y1="100" x2="220" y2="100" />
+            <line class="ag-bar" x1="240" y1="100" x2="240" y2="100" />
+            <line class="ag-bar" x1="260" y1="100" x2="260" y2="100" />
+            <line class="ag-bar" x1="280" y1="100" x2="280" y2="100" />
+            <line class="ag-bar" x1="300" y1="100" x2="300" y2="100" />
+            <line class="ag-bar" x1="320" y1="100" x2="320" y2="100" />
+            <line class="ag-bar" x1="340" y1="100" x2="340" y2="100" />
+            <line class="ag-bar" x1="360" y1="100" x2="360" y2="100" />
+            <line class="ag-bar" x1="380" y1="100" x2="380" y2="100" />
+          </g>
+        </svg>
+        <button class="btn btn--primary btn--lg agente__btn" id="agentTrigger">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/>
+            <path d="M19 10v2a7 7 0 0 1-14 0v-2M12 19v4M8 23h8"/>
+          </svg>
+          Hablar ahora
+        </button>
+      </div>
+
+      <div>
+        <div class="eyebrow">Asistencia 24/7</div>
+        <h2 class="agente__h2">Habla con LaserMed.<br /><span class="h-italic">A cualquier hora.</span></h2>
+        <p class="agente__body">
+          Te contesta una voz con IA. Sabe de láser, conoce los planes, agenda tu valoración, resuelve tus dudas.
+          Si prefieres humano, te pasamos con el equipo en horario de atención.
+        </p>
+        <div class="agente__features">
+          <span class="agente__feature">Resuelve dudas de servicios y precios</span>
+          <span class="agente__feature">Agenda tu valoración en el calendario</span>
+          <span class="agente__feature">Te transfiere al equipo si prefieres humano</span>
+          <span class="agente__feature">Disponible 24/7, fines de semana incluidos</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     13 · CTA FINAL + CONTACTO
+     ============================================ -->
+<section class="cta-final" id="contacto">
+  <div class="container cta-final__inner">
+    <div class="eyebrow" style="justify-content: center;">Empieza aquí</div>
+    <h2 class="cta-final__h2">
+      Empieza a sentir tu piel<br />
+      como <span class="h-italic">tuya</span> otra vez.
+    </h2>
+    <p class="cta-final__body">
+      La valoración es gratis, dura 20 minutos, y sales sabiendo exactamente si LaserMed es para ti.
+    </p>
+
+    <form class="form" id="contactForm" autocomplete="on" novalidate style="max-width: 480px; margin: 0 auto;">
+      <div class="form__row">
+        <div class="form__group">
+          <label class="form__label" for="nombre">Nombre</label>
+          <input class="form__input" type="text" id="nombre" name="nombre" required placeholder="Tu nombre" />
+        </div>
+        <div class="form__group">
+          <label class="form__label" for="telefono">WhatsApp</label>
+          <input class="form__input" type="tel" id="telefono" name="telefono" required placeholder="55 0000 0000" />
+        </div>
+      </div>
+      <div class="form__group">
+        <label class="form__label" for="servicio">¿Qué te interesa?</label>
+        <select class="form__select" id="servicio" name="servicio" required>
+          <option value="">Selecciona un servicio</option>
+          <option>Depilación láser</option>
+          <option>Eliminar un tatuaje</option>
+          <option>Borrar micropigmentación</option>
+          <option>Manchas o melasma</option>
+          <option>Rejuvenecimiento facial</option>
+          <option>Cicatrices o poros</option>
+          <option>Aún no estoy seguro</option>
+        </select>
+      </div>
+      <div class="form__group">
+        <label class="form__label" for="mensaje">Cuéntanos un poco (opcional)</label>
+        <textarea class="form__textarea" id="mensaje" name="mensaje" placeholder="Lo que quieras que sepamos antes de la valoración."></textarea>
+      </div>
+      <p class="form__note">
+        Al enviar aceptas nuestro <a href="#aviso-privacidad">Aviso de Privacidad</a>.
+        Te contactaremos por WhatsApp en menos de 24 h.
+      </p>
+      <button type="submit" class="btn btn--primary btn--lg btn--block">
+        Quiero mi valoración gratuita
+      </button>
+    </form>
+
+    <p class="cta-final__trust">
+      Aviso COFEPRIS vigente · Responsable sanitario con cédula · WhatsApp directo
+    </p>
+  </div>
+</section>
+
+</main>
+
+<!-- ============================================
+     14 · FOOTER
+     ============================================ -->
+<footer class="footer" id="footer">
+  <div class="container">
+    <div class="footer__top">
+      <div class="footer__brand">
+        <h3>LaserMed</h3>
+        <p>Piel cuidada con luz de verdad. Boutique de láser estético en CDMX.</p>
+      </div>
+
+      <div class="footer__col">
+        <h4>Servicios</h4>
+        <ul>
+          <li><a href="#servicios">Depilación láser</a></li>
+          <li><a href="#servicios">Eliminación de tatuajes</a></li>
+          <li><a href="#servicios">Micropigmentación</a></li>
+          <li><a href="#servicios">Manchas y melasma</a></li>
+          <li><a href="#servicios">Rejuvenecimiento</a></li>
+          <li><a href="#servicios">Cicatrices y poros</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <h4>LaserMed</h4>
+        <ul>
+          <li><a href="#equipo">Quiénes somos</a></li>
+          <li><a href="#proceso">El proceso</a></li>
+          <li><a href="#tecnologia">Tecnología</a></li>
+          <li><a href="#faq">Preguntas frecuentes</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <h4>Contacto</h4>
+        <ul>
+          <li><a href="https://wa.me/5255XXXXXXX" target="_blank" rel="noopener">WhatsApp</a></li>
+          <li><a href="mailto:hola@lasermed.mx">hola@lasermed.mx</a></li>
+          <li>Lun–Vie 10:00–19:00</li>
+          <li>Sáb 10:00–14:00</li>
+        </ul>
+        <h4 style="margin-top: var(--sp-8);">Redes</h4>
+        <ul>
+          <li><a href="https://instagram.com/lasermed.mx" target="_blank" rel="noopener">Instagram</a></li>
+          <li><a href="https://tiktok.com/@lasermed.mx" target="_blank" rel="noopener">TikTok</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer__legal">
+      <p>
+        <strong>Responsable sanitario:</strong> [Nombre de la médica] · Cédula profesional [N°]<br />
+        <strong>Aviso de Funcionamiento COFEPRIS N°</strong> [Por definir] · Vigente<br />
+        <strong>Equipo láser con registro sanitario COFEPRIS</strong><br />
+        <strong>Denuncias COFEPRIS:</strong> <a href="tel:8000335050">800 033 5050</a>
+      </p>
+      <p>
+        <a href="#aviso-privacidad">Aviso de Privacidad</a> ·
+        <a href="#terminos">Términos y Condiciones</a> ·
+        <a href="#cookies">Política de Cookies</a>
+      </p>
+    </div>
+
+    <div class="footer__copy">
+      <span>© 2026 LaserMed. Todos los derechos reservados.</span>
+      <span>Sitio diseñado por <a href="#" style="color: var(--lm-accent-soft);">ABDev</a></span>
+    </div>
+  </div>
+</footer>
+
+<!-- ============================================
+     FLOATING WHATSAPP
+     ============================================ -->
+<a class="float-wa" href="https://wa.me/5255XXXXXXX?text=Hola%20LaserMed%2C%20me%20interesa%20agendar%20una%20valoraci%C3%B3n" target="_blank" rel="noopener" aria-label="Hablar por WhatsApp">
+  <span class="float-wa__tooltip">Hablar con LaserMed</span>
+  <svg viewBox="0 0 24 24" aria-hidden="true">
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/>
+  </svg>
+</a>
+
+<!-- ============================================
+     AGENT MODAL (placeholder para ElevenLabs)
+     ============================================ -->
+<div class="agent-modal" id="agentModal" hidden role="dialog" aria-modal="true" aria-labelledby="agentTitle">
+  <div class="agent-modal__backdrop" data-close></div>
+  <div class="agent-modal__panel">
+    <button class="agent-modal__close" data-close aria-label="Cerrar">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M18 6L6 18M6 6l12 12"/>
+      </svg>
+    </button>
+    <h3 id="agentTitle">Asistente LaserMed</h3>
+    <p class="caption" style="margin-bottom: var(--sp-6);">
+      Te contesta una voz con IA. Resuelve dudas, agenda tu valoración o te transfiere con el equipo.
+    </p>
+    <!-- ElevenLabs embed goes here -->
+    <div id="elevenlabs-widget" style="min-height: 200px;">
+      <p class="caption" style="text-align: center; padding: var(--sp-12) 0;">
+        [Aquí va el widget conversacional de ElevenLabs.<br />
+        Pega el código del agente cuando esté listo.]
+      </p>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================
+     SCRIPTS
+     ============================================ -->
+<script src="js/main.js" defer></script>
+<script src="js/agent.js" defer></script>
+
+</body>
+</html>
