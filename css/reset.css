@@ -17,6 +17,10 @@ html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
+  /* Habilita scroll nativo de alta calidad */
+  scroll-padding-top: 80px;
+  /* Desactiva overscroll bounce en algunos browsers para scroll predecible */
+  overscroll-behavior-y: none;
 }
 
 body {
@@ -26,6 +30,8 @@ body {
   background: var(--lm-bg);
   color: var(--lm-ink);
   overflow-x: hidden;
+  /* Habilita aceleración de scroll */
+  -webkit-overflow-scrolling: touch;
 }
 
 img,

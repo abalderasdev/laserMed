@@ -1,6 +1,6 @@
 /* ============================================
    LaserMed · Main JS
-   Performance-first · un solo ticker GSAP
+   Minimal · scroll nativo del browser
    ============================================ */
 
 (function () {
@@ -8,25 +8,24 @@
 
   const $ = (sel, root = document) => root.querySelector(sel);
   const $$ = (sel, root = document) => Array.from(root.querySelectorAll(sel));
-  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   /* ============================================
-     1. NAV · scroll state (con throttling via rAF)
+     1. NAV · scroll state (throttled rAF)
      ============================================ */
 
   const nav = $('#nav');
   let navTicking = false;
-
-  const onScroll = () => {
-    if (navTicking) return;
-    navTicking = true;
-    requestAnimationFrame(() => {
-      nav.classList.toggle('nav--scrolled', window.scrollY > 50);
-      navTicking = false;
-    });
+  const updateNav = () => {
+    nav.classList.toggle('nav--scrolled', window.scrollY > 50);
+    navTicking = false;
   };
-  window.addEventListener('scroll', onScroll, { passive: true });
-  onScroll();
+  window.addEventListener('scroll', () => {
+    if (!navTicking) {
+      requestAnimationFrame(updateNav);
+      navTicking = true;
+    }
+  }, { passive: true });
+  updateNav();
 
   /* ============================================
      2. MOBILE MENU
@@ -57,59 +56,25 @@
   }
 
   /* ============================================
-     3. SMOOTH SCROLL · Lenis integrado con GSAP
+     3. SMOOTH SCROLL · NATIVO (CSS ya hace scroll-behavior: smooth)
+        Solo interceptamos para compensar el nav fijo
      ============================================ */
 
-  let lenis = null;
-  if (window.Lenis && window.gsap && window.ScrollTrigger) {
-    gsap.registerPlugin(ScrollTrigger);
-
-    lenis = new Lenis({
-      duration: 1.0,
-      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-      smoothWheel: true,
-      smoothTouch: false,
+  $$('a[href^="#"]').forEach((link) => {
+    link.addEventListener('click', (e) => {
+      const id = link.getAttribute('href');
+      if (id === '#' || id.length < 2) return;
+      const target = document.querySelector(id);
+      if (!target) return;
+      e.preventDefault();
+      const navH = nav ? nav.offsetHeight : 70;
+      const top = target.getBoundingClientRect().top + window.scrollY - navH - 16;
+      window.scrollTo({ top, behavior: 'smooth' });
     });
-
-    // UN SOLO TICKER: GSAP maneja Lenis y ScrollTrigger juntos
-    gsap.ticker.add((time) => {
-      lenis.raf(time * 1000);
-    });
-    gsap.ticker.lagSmoothing(0);
-
-    // ScrollTrigger usa el proxy de Lenis
-    lenis.on('scroll', ScrollTrigger.update);
-
-    // Anchor links
-    $$('a[href^="#"]').forEach((link) => {
-      link.addEventListener('click', (e) => {
-        const id = link.getAttribute('href');
-        if (id === '#' || id.length < 2) return;
-        const target = document.querySelector(id);
-        if (target) {
-          e.preventDefault();
-          lenis.scrollTo(target, { offset: -70, duration: 1.2 });
-        }
-      });
-    });
-  } else {
-    // Fallback nativo
-    $$('a[href^="#"]').forEach((link) => {
-      link.addEventListener('click', (e) => {
-        const id = link.getAttribute('href');
-        if (id === '#' || id.length < 2) return;
-        const target = document.querySelector(id);
-        if (target) {
-          e.preventDefault();
-          const top = target.getBoundingClientRect().top + window.scrollY - 70;
-          window.scrollTo({ top, behavior: 'smooth' });
-        }
-      });
-    });
-  }
+  });
 
   /* ============================================
-     4. REVEAL · IntersectionObserver eficiente
+     4. REVEAL · IntersectionObserver (one-shot, sin GSAP)
      ============================================ */
 
   const revealTargets = $$('.reveal, .reveal-fade, .reveal-scale, .reveal-blur, .clip-reveal, .line-mask, .word-mask, .line-draw');
@@ -124,7 +89,7 @@
           }
         }
       },
-      { threshold: 0.08, rootMargin: '0px 0px -5% 0px' }
+      { threshold: 0.05, rootMargin: '0px 0px -5% 0px' }
     );
     revealTargets.forEach((el) => io.observe(el));
   } else {
@@ -132,40 +97,7 @@
   }
 
   /* ============================================
-     5. GSAP · solo lo crítico (parallax hero + un par de polishes)
-     ============================================ */
-
-  if (window.gsap && window.ScrollTrigger && !reducedMotion) {
-    // Parallax hero media (más sutil para no joder el scroll)
-    const heroMedia = $('.hero__media');
-    if (heroMedia) {
-      gsap.to(heroMedia, {
-        yPercent: 8,
-        ease: 'none',
-        scrollTrigger: {
-          trigger: '.hero',
-          start: 'top top',
-          end: 'bottom top',
-          scrub: 0.5,
-        },
-      });
-    }
-
-    // Hover effect sutil en cards de servicio (solo en desktop)
-    if (window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
-      $$('.card').forEach((card) => {
-        card.addEventListener('mouseenter', () => {
-          gsap.to(card, { y: -4, duration: 0.4, ease: 'power3.out' });
-        });
-        card.addEventListener('mouseleave', () => {
-          gsap.to(card, { y: 0, duration: 0.4, ease: 'power3.out' });
-        });
-      });
-    }
-  }
-
-  /* ============================================
-     6. FAQ · accordion
+     5. FAQ · accordion
      ============================================ */
 
   $$('.faq__item').forEach((item) => {
@@ -179,7 +111,7 @@
   });
 
   /* ============================================
-     7. FORM · validation + WhatsApp
+     6. FORM · validation + WhatsApp
      ============================================ */
 
   const form = $('#contactForm');
@@ -222,7 +154,7 @@
   }
 
   /* ============================================
-     8. KEYBOARD · ESC closes mobile menu
+     7. KEYBOARD · ESC closes mobile menu
      ============================================ */
 
   document.addEventListener('keydown', (e) => {
@@ -232,23 +164,30 @@
   });
 
   /* ============================================
-     9. IDLE video · pause when off-screen
+     8. VIDEO · autoplay solo en desktop, pause off-screen
      ============================================ */
 
   const heroVideo = $('.hero__media video');
-  if (heroVideo && 'IntersectionObserver' in window) {
-    const vidIo = new IntersectionObserver(
-      (entries) => {
-        for (const entry of entries) {
-          if (entry.isIntersecting) {
-            heroVideo.play().catch(() => {});
-          } else {
-            heroVideo.pause();
+  if (heroVideo) {
+    const isMobile = window.matchMedia('(max-width: 768px)').matches;
+    if (isMobile) {
+      // En mobile: no video, solo poster
+      heroVideo.removeAttribute('autoplay');
+      heroVideo.pause();
+    } else if ('IntersectionObserver' in window) {
+      const vidIo = new IntersectionObserver(
+        (entries) => {
+          for (const entry of entries) {
+            if (entry.isIntersecting) {
+              heroVideo.play().catch(() => {});
+            } else {
+              heroVideo.pause();
+            }
           }
-        }
-      },
-      { threshold: 0.1 }
-    );
-    vidIo.observe(heroVideo);
+        },
+        { threshold: 0.05 }
+      );
+      vidIo.observe(heroVideo);
+    }
   }
 })();

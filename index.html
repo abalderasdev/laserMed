@@ -93,10 +93,7 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" media="print" onload="this.media='all'" />
   <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" /></noscript>
 
-  <!-- JS: GSAP, ScrollTrigger, Lenis (defer + módulo) -->
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" defer></script>
-  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js" defer></script>
+  <!-- JS: solo lo crítico, defer -->
 </head>
 <body>
 
@@ -153,7 +150,7 @@
      ============================================ -->
 <section class="hero" id="hero">
   <div class="hero__media" aria-hidden="true">
-    <video autoplay muted loop playsinline preload="metadata" poster="assets/img/hero-1.webp" width="1920" height="1080">
+    <video muted loop playsinline preload="none" poster="assets/img/hero-1.webp" width="1920" height="1080">
       <source src="assets/video/hero-loop.mp4" type="video/mp4" />
     </video>
   </div>

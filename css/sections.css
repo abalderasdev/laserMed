@@ -248,7 +248,6 @@
   aspect-ratio: 3 / 2;
   position: relative;
   background: var(--lm-bg-2);
-  contain: layout paint;
 }
 
 .pregunta__media img {
@@ -325,7 +324,6 @@
   aspect-ratio: 16 / 9;
   margin-bottom: var(--sp-16);
   background: var(--lm-bg-2);
-  contain: layout paint;
 }
 
 .porque__hero img {
@@ -380,9 +378,6 @@
 .tech {
   background: var(--lm-bg-dark);
   color: var(--lm-ink-inv);
-  /* Performance: skip rendering de lo que está fuera del viewport */
-  content-visibility: auto;
-  contain-intrinsic-size: 1px 1200px;
 }
 
 .tech__head {
@@ -421,9 +416,6 @@
   overflow: hidden;
   position: relative;
   background: var(--lm-bg-dark-2);
-  /* GPU acceleration para animaciones */
-  transform: translateZ(0);
-  backface-visibility: hidden;
 }
 
 .tech__media img {
@@ -541,7 +533,6 @@
   aspect-ratio: 4 / 3;
   margin-bottom: var(--sp-16);
   background: white;
-  contain: layout paint;
 }
 
 .proceso__hero img {
@@ -711,8 +702,6 @@
 .espacio {
   background: var(--lm-bg-dark);
   color: var(--lm-ink-inv);
-  content-visibility: auto;
-  contain-intrinsic-size: 1px 900px;
 }
 
 .espacio__head {
@@ -795,7 +784,6 @@
   aspect-ratio: 16 / 9;
   margin-bottom: var(--sp-8);
   background: var(--lm-bg-2);
-  contain: layout paint;
 }
 
 .resultados__cover img {
@@ -839,7 +827,6 @@
   aspect-ratio: 4 / 3;
   margin-bottom: var(--sp-12);
   background: white;
-  contain: layout paint;
 }
 
 .precios__hero img {
@@ -949,7 +936,6 @@
   max-width: 800px;
   margin: 0 auto var(--sp-16);
   background: var(--lm-bg-2);
-  contain: layout paint;
 }
 
 .faq__media img {

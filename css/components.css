@@ -21,7 +21,7 @@
   text-transform: uppercase;
   white-space: nowrap;
   cursor: pointer;
-  transition: all var(--dur) var(--ease-out);
+  transition: background-color var(--dur) var(--ease-out), color var(--dur) var(--ease-out), transform var(--dur) var(--ease-out), box-shadow var(--dur) var(--ease-out);
   text-decoration: none;
   position: relative;
   overflow: hidden;
@@ -168,9 +168,7 @@
 }
 
 .nav--scrolled {
-  background: rgba(245, 241, 234, 0.85);
-  backdrop-filter: saturate(180%) blur(20px);
-  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  background: rgba(245, 241, 234, 0.95);
   border-bottom: 1px solid var(--lm-border);
   padding: 14px 0;
 }
@@ -349,11 +347,9 @@
   background: white;
   border: 1px solid var(--lm-border);
   border-radius: var(--r-lg);
-  transition: all var(--dur) var(--ease-out);
+  transition: border-color var(--dur) var(--ease-out), box-shadow var(--dur) var(--ease-out);
   position: relative;
   overflow: hidden;
-  /* Performance: layout aislado */
-  contain: layout paint;
 }
 
 .card--padded { padding: var(--sp-8); }
@@ -373,7 +369,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 1.2s var(--ease-out);
+  transition: transform 0.8s var(--ease-out);
 }
 
 .card:hover .card__media img {
@@ -389,10 +385,9 @@
   border: 1px solid var(--lm-border);
   border-radius: var(--r-lg);
   padding: var(--sp-8);
-  transition: all var(--dur) var(--ease-out);
+  transition: border-color var(--dur) var(--ease-out), box-shadow var(--dur) var(--ease-out);
   position: relative;
   overflow: hidden;
-  contain: layout paint;
 }
 
 .card--alt {
@@ -420,6 +415,7 @@
   justify-content: center;
   margin-bottom: var(--sp-6);
   color: var(--lm-accent);
+  transition: background-color var(--dur) var(--ease-out);
 }
 
 .card__icon svg {
@@ -603,7 +599,7 @@
   align-items: center;
   justify-content: center;
   box-shadow: 0 8px 32px rgba(37, 211, 102, 0.4);
-  transition: all var(--dur) var(--ease-out);
+  transition: transform var(--dur) var(--ease-out), box-shadow var(--dur) var(--ease-out);
   animation: pulse-wa 2.5s infinite;
 }
 
