@@ -81,13 +81,8 @@
   <link rel="preload" as="image" href="/assets/img/hero-1.webp" fetchpriority="high" />
   <link rel="preload" as="font" type="font/woff2" href="https://fonts.gstatic.com/s/fraunces/v32/6NUu8FMOLAr3K7fCJ6Hbsw.woff2" crossorigin />
 
-  <!-- Styles -->
-  <link rel="stylesheet" href="css/reset.css" />
-  <link rel="stylesheet" href="css/tokens.css" />
-  <link rel="stylesheet" href="css/base.css" />
-  <link rel="stylesheet" href="css/components.css" />
-  <link rel="stylesheet" href="css/sections.css" />
-  <link rel="stylesheet" href="css/motion.css" />
+  <!-- Styles (combined + minified) -->
+  <link rel="stylesheet" href="styles.css" />
 
   <!-- Fonts no bloqueantes -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" media="print" onload="this.media='all'" />
@@ -150,9 +145,7 @@
      ============================================ -->
 <section class="hero" id="hero">
   <div class="hero__media" aria-hidden="true">
-    <video muted loop playsinline preload="none" poster="assets/img/hero-1.webp" width="1920" height="1080">
-      <source src="assets/video/hero-loop.mp4" type="video/mp4" />
-    </video>
+    <img src="assets/img/hero-1.webp" alt="Piel cuidada con luz de verdad" width="1920" height="1080" fetchpriority="high" decoding="async" />
   </div>
 
   <div class="container hero__inner">
@@ -201,7 +194,7 @@
 <section class="pregunta" id="pregunta">
   <div class="container pregunta__container">
     <div class="pregunta__media reveal-fade">
-      <img src="assets/img/pregunta.webp" alt="Hombro y cuello de mujer con luz cálida" loading="lazy" width="900" height="600" />
+      <img src="assets/img/pregunta.webp" alt="Hombro y cuello de mujer con luz cálida" loading="lazy" width="900" height="600"  decoding="async" />
     </div>
     <div class="pregunta__text">
       <h2 class="pregunta__h2 reveal-fade">
@@ -237,7 +230,7 @@
 
       <article class="card reveal" data-delay="1">
         <div class="card__media">
-          <img src="assets/img/servicio-card-depilacion.webp" alt="Piel suave después de depilación láser" loading="lazy" width="800" height="600" />
+          <img src="assets/img/servicio-card-depilacion.webp" alt="Piel suave después de depilación láser" loading="lazy" width="800" height="600"  decoding="async" />
         </div>
         <div class="card__body-inner">
           <span class="card__eyebrow">808 nm · 6–8 sesiones</span>
@@ -253,7 +246,7 @@
 
       <article class="card reveal" data-delay="2">
         <div class="card__media">
-          <img src="assets/img/servicio-card-tatuaje.webp" alt="Detalle de muñeca con tatuaje para eliminación con láser" loading="lazy" width="800" height="600" />
+          <img src="assets/img/servicio-card-tatuaje.webp" alt="Detalle de muñeca con tatuaje para eliminación con láser" loading="lazy" width="800" height="600"  decoding="async" />
         </div>
         <div class="card__body-inner">
           <span class="card__eyebrow">Picosegundos · 4–8 sesiones</span>
@@ -269,7 +262,7 @@
 
       <article class="card reveal" data-delay="3">
         <div class="card__media">
-          <img src="assets/img/servicio-tatuaje.webp" alt="Detalle de piel con micropigmentación para borrado" loading="lazy" width="800" height="600" />
+          <img src="assets/img/servicio-tatuaje.webp" alt="Detalle de piel con micropigmentación para borrado" loading="lazy" width="800" height="600"  decoding="async" />
         </div>
         <div class="card__body-inner">
           <span class="card__eyebrow">Picosegundos · 3–6 sesiones</span>
@@ -284,7 +277,7 @@
 
       <article class="card reveal" data-delay="4">
         <div class="card__media">
-          <img src="assets/img/servicio-card-manchas.webp" alt="Detalle de rostro con manchas solares a tratar" loading="lazy" width="800" height="600" />
+          <img src="assets/img/servicio-card-manchas.webp" alt="Detalle de rostro con manchas solares a tratar" loading="lazy" width="800" height="600"  decoding="async" />
         </div>
         <div class="card__body-inner">
           <span class="card__eyebrow">Picosegundos · 2–4 sesiones</span>
@@ -299,7 +292,7 @@
 
       <article class="card reveal" data-delay="5">
         <div class="card__media">
-          <img src="assets/img/servicio-rejuvenecimiento.webp" alt="Rostro de mujer madura con piel luminosa rejuvenecida" loading="lazy" width="800" height="600" />
+          <img src="assets/img/servicio-rejuvenecimiento.webp" alt="Rostro de mujer madura con piel luminosa rejuvenecida" loading="lazy" width="800" height="600"  decoding="async" />
         </div>
         <div class="card__body-inner">
           <span class="card__eyebrow">Picosegundos fraccional · 3–4 sesiones</span>
@@ -314,7 +307,7 @@
 
       <article class="card reveal" data-delay="6">
         <div class="card__media">
-          <img src="assets/img/servicio-cicatrices.webp" alt="Detalle de mejilla con cicatrices de acné para tratamiento" loading="lazy" width="800" height="600" />
+          <img src="assets/img/servicio-cicatrices.webp" alt="Detalle de mejilla con cicatrices de acné para tratamiento" loading="lazy" width="800" height="600"  decoding="async" />
         </div>
         <div class="card__body-inner">
           <span class="card__eyebrow">Picosegundos + 1320 nm · 3–6 sesiones</span>
@@ -342,7 +335,7 @@
 <section class="porque" id="porque">
   <div class="container">
     <div class="porque__hero reveal-fade">
-      <img src="assets/img/porque-consulta.webp" alt="Consultorio de valoración médica" loading="lazy" width="1600" height="900" />
+      <img src="assets/img/porque-consulta.webp" alt="Consultorio de valoración médica" loading="lazy" width="1600" height="900"  decoding="async" />
     </div>
     <div class="porque__head">
       <div class="eyebrow">Lo que nos hace diferentes</div>
@@ -398,7 +391,7 @@
       <!-- Bloque A: 808 nm -->
       <div class="tech__block">
         <div class="tech__media clip-reveal">
-          <img src="assets/img/tecnologia-bloque-a.webp" alt="Piel iluminada con luz cálida, detalle de retrato" loading="lazy" / width="1920" height="1433">
+          <img src="assets/img/tecnologia-bloque-a.webp" alt="Piel iluminada con luz cálida, detalle de retrato" loading="lazy" / width="1920" height="1433" decoding="async">
         </div>
         <div>
           <span class="tech__num">01 · DIODO 808 NM</span>
@@ -428,7 +421,7 @@
       <!-- Bloque B: Picosegundos -->
       <div class="tech__block tech__block--reverse">
         <div class="tech__media clip-reveal">
-          <img src="assets/img/tecnologia-bloque-b.webp" alt="Detalle editorial de aplicación de láser facial" loading="lazy" / width="1920" height="1433">
+          <img src="assets/img/tecnologia-bloque-b.webp" alt="Detalle editorial de aplicación de láser facial" loading="lazy" / width="1920" height="1433" decoding="async">
         </div>
         <div>
           <span class="tech__num">02 · PICOSEGUNDOS</span>
@@ -493,7 +486,7 @@
     </div>
 
     <div class="proceso__hero reveal-fade">
-      <img src="assets/img/proceso-plan.webp" alt="Plan de tratamiento personalizado escrito a mano" loading="lazy" width="1200" height="900" />
+      <img src="assets/img/proceso-plan.webp" alt="Plan de tratamiento personalizado escrito a mano" loading="lazy" width="1200" height="900"  decoding="async" />
     </div>
 
     <div class="proceso__steps">
@@ -561,7 +554,7 @@
     <div class="quienes__grid">
       <article class="quienes__card reveal" data-delay="1">
         <div class="quienes__avatar">
-          <img src="assets/img/equipo-medico.webp" alt="Dra. responsable sanitario" loading="lazy" / width="1792" height="2400">
+          <img src="assets/img/equipo-medico.webp" alt="Dra. responsable sanitario" loading="lazy" / width="1792" height="2400" decoding="async">
         </div>
         <div class="quienes__role">Responsable sanitaria</div>
         <h3 class="quienes__name">[Nombre de la médica]</h3>
@@ -571,7 +564,7 @@
       </article>
       <article class="quienes__card reveal" data-delay="2">
         <div class="quienes__avatar">
-          <img src="assets/img/equipo-operadora.webp" alt="Operadora láser" loading="lazy" / width="1792" height="2400">
+          <img src="assets/img/equipo-operadora.webp" alt="Operadora láser" loading="lazy" / width="1792" height="2400" decoding="async">
         </div>
         <div class="quienes__role">Operadora láser</div>
         <h3 class="quienes__name">[Nombre de operadora]</h3>
@@ -581,7 +574,7 @@
       </article>
       <article class="quienes__card reveal" data-delay="3">
         <div class="quienes__avatar">
-          <img src="assets/img/proceso-valoracion.webp" alt="Fundadora de LaserMed" loading="lazy" / width="1792" height="2400">
+          <img src="assets/img/proceso-valoracion.webp" alt="Fundadora de LaserMed" loading="lazy" / width="1792" height="2400" decoding="async">
         </div>
         <div class="quienes__role">Fundadora</div>
         <h3 class="quienes__name">[Nombre de fundadora]</h3>
@@ -613,22 +606,22 @@
 
     <div class="espacio__grid">
       <div class="espacio__item">
-        <img src="assets/img/espacio-cabina.webp" alt="Cabina principal de tratamiento" loading="lazy" / width="1920" height="1071">
+        <img src="assets/img/espacio-cabina.webp" alt="Cabina principal de tratamiento" loading="lazy" / width="1920" height="1071" decoding="async">
       </div>
       <div class="espacio__item">
-        <img src="assets/img/espacio-sala-espera.webp" alt="Sala de espera" loading="lazy" / width="1920" height="1433">
+        <img src="assets/img/espacio-sala-espera.webp" alt="Sala de espera" loading="lazy" / width="1920" height="1433" decoding="async">
       </div>
       <div class="espacio__item">
-        <img src="assets/img/espacio-detalle-equipo.webp" alt="Detalle de la pieza de mano del equipo láser" loading="lazy" / width="1920" height="1920">
+        <img src="assets/img/espacio-detalle-equipo.webp" alt="Detalle de la pieza de mano del equipo láser" loading="lazy" / width="1920" height="1920" decoding="async">
       </div>
       <div class="espacio__item">
-        <img src="assets/img/espacio-decoracion.webp" alt="Detalle de decoración del espacio" loading="lazy" / width="1920" height="1433">
+        <img src="assets/img/espacio-decoracion.webp" alt="Detalle de decoración del espacio" loading="lazy" / width="1920" height="1433" decoding="async">
       </div>
       <div class="espacio__item">
-        <img src="assets/img/hero-2.webp" alt="Detalle del espacio y la luz" loading="lazy" / width="1792" height="2400">
+        <img src="assets/img/hero-2.webp" alt="Detalle del espacio y la luz" loading="lazy" / width="1792" height="2400" decoding="async">
       </div>
       <div class="espacio__item">
-        <img src="assets/img/tecnologia-abstract.webp" alt="Detalle de la piel" loading="lazy" / width="1920" height="1920">
+        <img src="assets/img/tecnologia-abstract.webp" alt="Detalle de la piel" loading="lazy" / width="1920" height="1920" decoding="async">
       </div>
     </div>
   </div>
@@ -650,7 +643,7 @@
     </p>
 
     <div class="resultados__cover reveal-fade">
-      <img src="assets/img/resultados-portada.webp" alt="Piel luminosa y cuidada, resultado de tratamientos láser" loading="lazy" width="1600" height="900" />
+      <img src="assets/img/resultados-portada.webp" alt="Piel luminosa y cuidada, resultado de tratamientos láser" loading="lazy" width="1600" height="900"  decoding="async" />
     </div>
 
     <div class="resultados__empty reveal">
@@ -675,7 +668,7 @@
     </div>
 
     <div class="precios__hero reveal-fade">
-      <img src="assets/img/precios-equipo.webp" alt="Pieza de mano del equipo láser sobre superficie de mármol" loading="lazy" width="1200" height="900" />
+      <img src="assets/img/precios-equipo.webp" alt="Pieza de mano del equipo láser sobre superficie de mármol" loading="lazy" width="1200" height="900"  decoding="async" />
     </div>
 
     <div class="precios__tabla">
@@ -809,7 +802,7 @@
     </div>
 
     <div class="faq__media reveal-fade">
-      <img src="assets/img/faq-textura.webp" alt="Textura de lino beige con rama seca" loading="lazy" width="1200" height="800" />
+      <img src="assets/img/faq-textura.webp" alt="Textura de lino beige con rama seca" loading="lazy" width="1200" height="800"  decoding="async" />
     </div>
 
     <div class="faq__list">
@@ -922,26 +915,18 @@
               <stop offset="100%" stop-color="#e8b89e" stop-opacity="0" />
             </linearGradient>
           </defs>
-          <g fill="none" stroke="url(#agente-grad)" stroke-width="2" stroke-linecap="round">
-            <line class="ag-bar" x1="20" y1="100" x2="20" y2="100" />
+          <g fill="none" stroke="url(#agente-grad)" stroke-width="2.5" stroke-linecap="round">
             <line class="ag-bar" x1="40" y1="100" x2="40" y2="100" />
-            <line class="ag-bar" x1="60" y1="100" x2="60" y2="100" />
             <line class="ag-bar" x1="80" y1="100" x2="80" y2="100" />
-            <line class="ag-bar" x1="100" y1="100" x2="100" y2="100" />
             <line class="ag-bar" x1="120" y1="100" x2="120" y2="100" />
-            <line class="ag-bar" x1="140" y1="100" x2="140" y2="100" />
             <line class="ag-bar" x1="160" y1="100" x2="160" y2="100" />
-            <line class="ag-bar" x1="180" y1="100" x2="180" y2="100" />
             <line class="ag-bar" x1="200" y1="100" x2="200" y2="100" />
-            <line class="ag-bar" x1="220" y1="100" x2="220" y2="100" />
             <line class="ag-bar" x1="240" y1="100" x2="240" y2="100" />
-            <line class="ag-bar" x1="260" y1="100" x2="260" y2="100" />
             <line class="ag-bar" x1="280" y1="100" x2="280" y2="100" />
-            <line class="ag-bar" x1="300" y1="100" x2="300" y2="100" />
             <line class="ag-bar" x1="320" y1="100" x2="320" y2="100" />
-            <line class="ag-bar" x1="340" y1="100" x2="340" y2="100" />
             <line class="ag-bar" x1="360" y1="100" x2="360" y2="100" />
-            <line class="ag-bar" x1="380" y1="100" x2="380" y2="100" />
+            <line class="ag-bar" x1="400" y1="100" x2="400" y2="100" />
+            <line class="ag-bar" x1="440" y1="100" x2="440" y2="100" />
           </g>
         </svg>
         <button class="btn btn--primary btn--lg agente__btn" id="agentTrigger">
@@ -976,7 +961,7 @@
      ============================================ -->
 <section class="cta-final" id="contacto">
   <div class="cta-final__bg" aria-hidden="true">
-    <img src="assets/img/cta-final.webp" alt="" loading="lazy" width="1200" height="900" />
+    <img src="assets/img/cta-final.webp" alt="" loading="lazy" width="1200" height="900"  decoding="async" />
   </div>
   <div class="container cta-final__inner">
     <div class="eyebrow" style="justify-content: center;">Empieza aquí</div>
@@ -1142,9 +1127,16 @@
 <!-- ============================================
      SCRIPTS
      ============================================ -->
-<script src="js/main.js" defer></script>
-<script src="js/agent.js" defer></script>
-<script src="js/feedback.js" defer></script>
+<script src="app.js" defer></script>
+<script>
+  // Carga feedback.js SOLO si se necesita (impeccable-lite)
+  if (location.search.includes('feedback=1') || location.search.includes('admin=1')) {
+    var s = document.createElement('script');
+    s.src = 'js/feedback.js';
+    s.defer = true;
+    document.head.appendChild(s);
+  }
+</script>
 
 </body>
 </html>
